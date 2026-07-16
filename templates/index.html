@@ -14,6 +14,11 @@
         rel="stylesheet"
         href="{{ url_for('static', filename='styles.css') }}"
     >
+
+    <script
+        src="{{ url_for('static', filename='scian-search.js') }}"
+        defer
+    ></script>
 </head>
 
 <body>
@@ -87,6 +92,77 @@
                     </select>
                 </div>
 
+                <div class="field field-wide scian-search-field">
+                    <label for="scian_search">
+                        Buscar actividad económica
+                    </label>
+
+                    <div class="scian-search-shell">
+                        <input
+                            id="scian_search"
+                            type="search"
+                            placeholder="Ejemplo: llantas, veterinaria o restaurantes"
+                            autocomplete="off"
+                            spellcheck="false"
+                            role="combobox"
+                            aria-autocomplete="list"
+                            aria-controls="scian_results"
+                            aria-expanded="false"
+                            aria-describedby="scian_status"
+                        >
+
+                        <div
+                            id="scian_results"
+                            class="scian-results"
+                            role="listbox"
+                            data-catalog-url="{{
+                                url_for(
+                                    'static',
+                                    filename='data/scian_classes.json'
+                                )
+                            }}"
+                            hidden
+                        ></div>
+                    </div>
+
+                    <small
+                        id="scian_status"
+                        class="field-hint"
+                        role="status"
+                    >
+                        Escribe al menos 2 caracteres y selecciona
+                        una actividad.
+                    </small>
+
+                    <div
+                        id="scian_selected"
+                        class="scian-selected"
+                        aria-live="polite"
+                        hidden
+                    >
+                        <div class="scian-selected-copy">
+                            <span class="scian-selected-label">
+                                Actividad seleccionada
+                            </span>
+
+                            <strong id="scian_selected_name"></strong>
+
+                            <span
+                                id="scian_selected_code"
+                                class="scian-selected-code"
+                            ></span>
+                        </div>
+
+                        <button
+                            id="scian_clear"
+                            class="scian-clear-button"
+                            type="button"
+                        >
+                            Cambiar actividad
+                        </button>
+                    </div>
+                </div>
+
                 <div class="field">
                     <label for="activity_class">
                         Clase SCIAN
@@ -98,14 +174,17 @@
                         type="text"
                         inputmode="numeric"
                         maxlength="6"
+                        pattern="0|[0-9]{6}"
+                        title="Escribe 0 o una clave SCIAN de seis dígitos."
                         value="{{ form_data.activity_class }}"
                         placeholder="Ejemplo: 468213"
                         required
                     >
 
                     <small class="field-hint">
-                        468213 corresponde al comercio minorista
-                        de llantas. Usa 0 para todas las actividades.
+                        Se completa al seleccionar una actividad.
+                        También puedes escribir manualmente 0 o una
+                        clave de seis dígitos.
                     </small>
                 </div>
 

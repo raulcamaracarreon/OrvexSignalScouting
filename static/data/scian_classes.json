@@ -1,0 +1,4351 @@
+{
+  "source": "SCIAN México 2023, INEGI",
+  "sheet": "CLASE",
+  "count": 1086,
+  "classes": [
+    {
+      "code": "111110",
+      "name": "Cultivo de soya"
+    },
+    {
+      "code": "111121",
+      "name": "Cultivo de cártamo"
+    },
+    {
+      "code": "111122",
+      "name": "Cultivo de girasol"
+    },
+    {
+      "code": "111129",
+      "name": "Cultivo anual de otras semillas oleaginosas"
+    },
+    {
+      "code": "111131",
+      "name": "Cultivo de frijol grano"
+    },
+    {
+      "code": "111132",
+      "name": "Cultivo de garbanzo grano"
+    },
+    {
+      "code": "111139",
+      "name": "Cultivo de otras leguminosas"
+    },
+    {
+      "code": "111140",
+      "name": "Cultivo de trigo"
+    },
+    {
+      "code": "111151",
+      "name": "Cultivo de maíz grano"
+    },
+    {
+      "code": "111152",
+      "name": "Cultivo de maíz forrajero"
+    },
+    {
+      "code": "111160",
+      "name": "Cultivo de arroz"
+    },
+    {
+      "code": "111191",
+      "name": "Cultivo de sorgo grano"
+    },
+    {
+      "code": "111192",
+      "name": "Cultivo de avena grano"
+    },
+    {
+      "code": "111193",
+      "name": "Cultivo de cebada grano"
+    },
+    {
+      "code": "111194",
+      "name": "Cultivo de sorgo forrajero"
+    },
+    {
+      "code": "111195",
+      "name": "Cultivo de avena forrajera"
+    },
+    {
+      "code": "111199",
+      "name": "Cultivo de otros cereales"
+    },
+    {
+      "code": "111211",
+      "name": "Cultivo de jitomate o tomate rojo"
+    },
+    {
+      "code": "111212",
+      "name": "Cultivo de chile"
+    },
+    {
+      "code": "111213",
+      "name": "Cultivo de cebolla"
+    },
+    {
+      "code": "111214",
+      "name": "Cultivo de melón"
+    },
+    {
+      "code": "111215",
+      "name": "Cultivo de tomate verde"
+    },
+    {
+      "code": "111216",
+      "name": "Cultivo de papa"
+    },
+    {
+      "code": "111217",
+      "name": "Cultivo de calabaza"
+    },
+    {
+      "code": "111218",
+      "name": "Cultivo de sandía"
+    },
+    {
+      "code": "111219",
+      "name": "Cultivo de otras hortalizas"
+    },
+    {
+      "code": "111310",
+      "name": "Cultivo de naranja"
+    },
+    {
+      "code": "111321",
+      "name": "Cultivo de limón"
+    },
+    {
+      "code": "111329",
+      "name": "Cultivo de otros cítricos"
+    },
+    {
+      "code": "111331",
+      "name": "Cultivo de café"
+    },
+    {
+      "code": "111332",
+      "name": "Cultivo de plátano"
+    },
+    {
+      "code": "111333",
+      "name": "Cultivo de mango"
+    },
+    {
+      "code": "111334",
+      "name": "Cultivo de aguacate"
+    },
+    {
+      "code": "111335",
+      "name": "Cultivo de uva"
+    },
+    {
+      "code": "111336",
+      "name": "Cultivo de manzana"
+    },
+    {
+      "code": "111337",
+      "name": "Cultivo de cacao"
+    },
+    {
+      "code": "111338",
+      "name": "Cultivo de coco"
+    },
+    {
+      "code": "111339",
+      "name": "Cultivo de otros frutales no cítricos y de nueces"
+    },
+    {
+      "code": "111411",
+      "name": "Cultivo de jitomate en invernaderos y otras estructuras agrícolas protegidas"
+    },
+    {
+      "code": "111412",
+      "name": "Cultivo de fresa en invernaderos y otras estructuras agrícolas protegidas"
+    },
+    {
+      "code": "111413",
+      "name": "Cultivo de bayas (berries) en invernaderos y otras estructuras agrícolas protegidas, excepto fresas"
+    },
+    {
+      "code": "111414",
+      "name": "Cultivo de chile en invernaderos y otras estructuras agrícolas protegidas"
+    },
+    {
+      "code": "111415",
+      "name": "Cultivo de manzana en invernaderos y otras estructuras agrícolas protegidas"
+    },
+    {
+      "code": "111416",
+      "name": "Cultivo de pepino en invernaderos y otras estructuras agrícolas protegidas"
+    },
+    {
+      "code": "111419",
+      "name": "Cultivo de otros productos alimenticios en invernaderos y otras estructuras agrícolas protegidas"
+    },
+    {
+      "code": "111421",
+      "name": "Floricultura a cielo abierto"
+    },
+    {
+      "code": "111422",
+      "name": "Floricultura en invernaderos y otras estructuras agrícolas protegidas"
+    },
+    {
+      "code": "111423",
+      "name": "Cultivo de árboles de ciclo productivo de 10 años o menos"
+    },
+    {
+      "code": "111429",
+      "name": "Otros cultivos no alimenticios en invernaderos y otras estructuras agrícolas protegidas"
+    },
+    {
+      "code": "111910",
+      "name": "Cultivo de tabaco"
+    },
+    {
+      "code": "111920",
+      "name": "Cultivo de algodón"
+    },
+    {
+      "code": "111930",
+      "name": "Cultivo de caña de azúcar"
+    },
+    {
+      "code": "111941",
+      "name": "Cultivo de alfalfa"
+    },
+    {
+      "code": "111942",
+      "name": "Cultivo de pastos"
+    },
+    {
+      "code": "111991",
+      "name": "Cultivo de agaves alcoholeros"
+    },
+    {
+      "code": "111992",
+      "name": "Cultivo de cacahuate"
+    },
+    {
+      "code": "111993",
+      "name": "Actividades agrícolas combinadas con explotación de animales"
+    },
+    {
+      "code": "111994",
+      "name": "Actividades agrícolas combinadas con aprovechamiento forestal"
+    },
+    {
+      "code": "111995",
+      "name": "Actividades agrícolas combinadas con explotación de animales y aprovechamiento forestal"
+    },
+    {
+      "code": "111999",
+      "name": "Otros cultivos"
+    },
+    {
+      "code": "112110",
+      "name": "Explotación de bovinos para la producción de carne"
+    },
+    {
+      "code": "112120",
+      "name": "Explotación de bovinos para la producción de leche"
+    },
+    {
+      "code": "112131",
+      "name": "Explotación de bovinos para la producción conjunta de leche y carne"
+    },
+    {
+      "code": "112139",
+      "name": "Explotación de bovinos para otros propósitos"
+    },
+    {
+      "code": "112211",
+      "name": "Explotación de porcinos en granja"
+    },
+    {
+      "code": "112212",
+      "name": "Explotación de porcinos en traspatio"
+    },
+    {
+      "code": "112311",
+      "name": "Explotación de gallinas para la producción de huevo fértil"
+    },
+    {
+      "code": "112312",
+      "name": "Explotación de gallinas para la producción de huevo para plato"
+    },
+    {
+      "code": "112320",
+      "name": "Explotación de pollos para la producción de carne"
+    },
+    {
+      "code": "112330",
+      "name": "Explotación de guajolotes o pavos"
+    },
+    {
+      "code": "112340",
+      "name": "Producción de aves en incubadora"
+    },
+    {
+      "code": "112390",
+      "name": "Explotación de otras aves para producción de carne y huevo"
+    },
+    {
+      "code": "112410",
+      "name": "Explotación de ovinos"
+    },
+    {
+      "code": "112420",
+      "name": "Explotación de caprinos"
+    },
+    {
+      "code": "112513",
+      "name": "Camaronicultura y acuicultura de otros crustáceos en agua salada"
+    },
+    {
+      "code": "112514",
+      "name": "Camaronicultura y acuicultura de otros crustáceos en agua dulce"
+    },
+    {
+      "code": "112515",
+      "name": "Piscicultura en agua dulce"
+    },
+    {
+      "code": "112516",
+      "name": "Piscicultura en agua salada"
+    },
+    {
+      "code": "112519",
+      "name": "Otra acuicultura"
+    },
+    {
+      "code": "112910",
+      "name": "Apicultura"
+    },
+    {
+      "code": "112920",
+      "name": "Explotación de équidos"
+    },
+    {
+      "code": "112930",
+      "name": "Cunicultura y explotación de animales con pelaje fino"
+    },
+    {
+      "code": "112991",
+      "name": "Explotación de animales combinada con aprovechamiento forestal"
+    },
+    {
+      "code": "112999",
+      "name": "Explotación de otros animales"
+    },
+    {
+      "code": "113110",
+      "name": "Silvicultura"
+    },
+    {
+      "code": "113211",
+      "name": "Viveros forestales"
+    },
+    {
+      "code": "113212",
+      "name": "Recolección de productos forestales"
+    },
+    {
+      "code": "113310",
+      "name": "Aprovechamiento de árboles"
+    },
+    {
+      "code": "114111",
+      "name": "Pesca de camarón"
+    },
+    {
+      "code": "114112",
+      "name": "Pesca de túnidos"
+    },
+    {
+      "code": "114113",
+      "name": "Pesca de sardina y anchoveta"
+    },
+    {
+      "code": "114119",
+      "name": "Pesca y captura de otros peces, crustáceos, moluscos y otras especies"
+    },
+    {
+      "code": "114210",
+      "name": "Caza y captura"
+    },
+    {
+      "code": "115111",
+      "name": "Servicios de fumigación agrícola"
+    },
+    {
+      "code": "115112",
+      "name": "Despepite de algodón"
+    },
+    {
+      "code": "115113",
+      "name": "Beneficio de productos agrícolas"
+    },
+    {
+      "code": "115119",
+      "name": "Otros servicios relacionados con la agricultura"
+    },
+    {
+      "code": "115210",
+      "name": "Servicios relacionados con la cría y explotación de animales"
+    },
+    {
+      "code": "115310",
+      "name": "Servicios relacionados con el aprovechamiento forestal"
+    },
+    {
+      "code": "211111",
+      "name": "Extracción de petróleo y gas natural asociado"
+    },
+    {
+      "code": "211112",
+      "name": "Extracción de gas natural no asociado"
+    },
+    {
+      "code": "212110",
+      "name": "Minería de carbón mineral"
+    },
+    {
+      "code": "212210",
+      "name": "Minería de hierro"
+    },
+    {
+      "code": "212221",
+      "name": "Minería de oro"
+    },
+    {
+      "code": "212222",
+      "name": "Minería de plata"
+    },
+    {
+      "code": "212231",
+      "name": "Minería de cobre"
+    },
+    {
+      "code": "212232",
+      "name": "Minería de plomo y zinc"
+    },
+    {
+      "code": "212291",
+      "name": "Minería de manganeso"
+    },
+    {
+      "code": "212292",
+      "name": "Minería de mercurio y antimonio"
+    },
+    {
+      "code": "212293",
+      "name": "Minería de uranio y minerales radiactivos"
+    },
+    {
+      "code": "212299",
+      "name": "Minería de otros minerales metálicos"
+    },
+    {
+      "code": "212311",
+      "name": "Minería de piedra caliza"
+    },
+    {
+      "code": "212312",
+      "name": "Minería de mármol"
+    },
+    {
+      "code": "212319",
+      "name": "Minería de otras piedras dimensionadas"
+    },
+    {
+      "code": "212321",
+      "name": "Minería de arena y grava para la construcción"
+    },
+    {
+      "code": "212322",
+      "name": "Minería de tezontle y tepetate"
+    },
+    {
+      "code": "212323",
+      "name": "Minería de feldespato"
+    },
+    {
+      "code": "212324",
+      "name": "Minería de sílice"
+    },
+    {
+      "code": "212325",
+      "name": "Minería de caolín"
+    },
+    {
+      "code": "212329",
+      "name": "Minería de otras arcillas y de otros minerales refractarios"
+    },
+    {
+      "code": "212391",
+      "name": "Minería de sal"
+    },
+    {
+      "code": "212392",
+      "name": "Minería de piedra de yeso"
+    },
+    {
+      "code": "212393",
+      "name": "Minería de barita"
+    },
+    {
+      "code": "212394",
+      "name": "Minería de roca fosfórica"
+    },
+    {
+      "code": "212395",
+      "name": "Minería de fluorita"
+    },
+    {
+      "code": "212396",
+      "name": "Minería de grafito"
+    },
+    {
+      "code": "212397",
+      "name": "Minería de azufre"
+    },
+    {
+      "code": "212398",
+      "name": "Minería de minerales no metálicos para productos químicos"
+    },
+    {
+      "code": "212399",
+      "name": "Minería de otros minerales no metálicos"
+    },
+    {
+      "code": "213111",
+      "name": "Perforación de pozos petroleros y de gas"
+    },
+    {
+      "code": "213119",
+      "name": "Otros servicios relacionados con la minería"
+    },
+    {
+      "code": "221111",
+      "name": "Generación de electricidad a partir de combustibles fósiles"
+    },
+    {
+      "code": "221112",
+      "name": "Generación de electricidad a partir de energía hidráulica"
+    },
+    {
+      "code": "221113",
+      "name": "Generación de electricidad a partir de energía solar"
+    },
+    {
+      "code": "221114",
+      "name": "Generación de electricidad a partir de energía eólica"
+    },
+    {
+      "code": "221119",
+      "name": "Generación de electricidad a partir de otro tipo de energía"
+    },
+    {
+      "code": "221121",
+      "name": "Transmisión de energía eléctrica"
+    },
+    {
+      "code": "221122",
+      "name": "Distribución de energía eléctrica"
+    },
+    {
+      "code": "221123",
+      "name": "Comercialización de energía eléctrica"
+    },
+    {
+      "code": "221210",
+      "name": "Suministro de gas natural por ductos al consumidor final"
+    },
+    {
+      "code": "221311",
+      "name": "Captación, tratamiento y suministro de agua realizados por el sector privado"
+    },
+    {
+      "code": "221312",
+      "name": "Captación, tratamiento y suministro de agua realizados por el sector público"
+    },
+    {
+      "code": "236111",
+      "name": "Edificación de vivienda unifamiliar"
+    },
+    {
+      "code": "236112",
+      "name": "Edificación de vivienda multifamiliar"
+    },
+    {
+      "code": "236113",
+      "name": "Supervisión de edificación residencial"
+    },
+    {
+      "code": "236211",
+      "name": "Edificación de naves y plantas industriales, excepto la supervisión"
+    },
+    {
+      "code": "236212",
+      "name": "Supervisión de edificación de naves y plantas industriales"
+    },
+    {
+      "code": "236221",
+      "name": "Edificación de inmuebles comerciales y de servicios, y otras edificaciones no residenciales, excepto la supervisión"
+    },
+    {
+      "code": "236222",
+      "name": "Supervisión de edificación de inmuebles comerciales y de servicios, y otras edificaciones no residenciales"
+    },
+    {
+      "code": "237111",
+      "name": "Construcción de obras para el tratamiento, distribución y suministro de agua y drenaje"
+    },
+    {
+      "code": "237112",
+      "name": "Construcción de sistemas de riego agrícola"
+    },
+    {
+      "code": "237113",
+      "name": "Supervisión de construcción de obras para el tratamiento, distribución y suministro de agua, drenaje y riego"
+    },
+    {
+      "code": "237121",
+      "name": "Construcción de sistemas de distribución de petróleo y gas"
+    },
+    {
+      "code": "237122",
+      "name": "Construcción de plantas de refinería y petroquímica"
+    },
+    {
+      "code": "237123",
+      "name": "Supervisión de construcción de obras para petróleo y gas"
+    },
+    {
+      "code": "237131",
+      "name": "Construcción de obras de generación y conducción de energía eléctrica"
+    },
+    {
+      "code": "237132",
+      "name": "Construcción de obras para telecomunicaciones"
+    },
+    {
+      "code": "237133",
+      "name": "Supervisión de construcción de obras de generación y conducción de energía eléctrica y de obras para telecomunicaciones"
+    },
+    {
+      "code": "237211",
+      "name": "División de terrenos"
+    },
+    {
+      "code": "237212",
+      "name": "Construcción de obras de urbanización"
+    },
+    {
+      "code": "237213",
+      "name": "Supervisión de división de terrenos y de construcción de obras de urbanización"
+    },
+    {
+      "code": "237311",
+      "name": "Instalación de señalamientos y protecciones en obras viales"
+    },
+    {
+      "code": "237312",
+      "name": "Construcción de carreteras, puentes y similares"
+    },
+    {
+      "code": "237313",
+      "name": "Supervisión de construcción de vías de comunicación"
+    },
+    {
+      "code": "237991",
+      "name": "Construcción de presas y represas"
+    },
+    {
+      "code": "237992",
+      "name": "Construcción de obras marítimas, fluviales y subacuáticas"
+    },
+    {
+      "code": "237993",
+      "name": "Construcción de obras para transporte eléctrico y ferroviario"
+    },
+    {
+      "code": "237994",
+      "name": "Supervisión de construcción de otras obras de ingeniería civil"
+    },
+    {
+      "code": "237999",
+      "name": "Otras construcciones de ingeniería civil"
+    },
+    {
+      "code": "238110",
+      "name": "Trabajos de cimentaciones"
+    },
+    {
+      "code": "238121",
+      "name": "Montaje de estructuras de concreto prefabricadas"
+    },
+    {
+      "code": "238122",
+      "name": "Montaje de estructuras de acero prefabricadas"
+    },
+    {
+      "code": "238130",
+      "name": "Trabajos de albañilería"
+    },
+    {
+      "code": "238190",
+      "name": "Otros trabajos en exteriores"
+    },
+    {
+      "code": "238210",
+      "name": "Instalaciones eléctricas en construcciones"
+    },
+    {
+      "code": "238221",
+      "name": "Instalaciones hidrosanitarias y de gas"
+    },
+    {
+      "code": "238222",
+      "name": "Instalaciones de sistemas centrales de aire acondicionado y calefacción"
+    },
+    {
+      "code": "238290",
+      "name": "Otras instalaciones y equipamiento en construcciones"
+    },
+    {
+      "code": "238311",
+      "name": "Colocación de muros falsos y aislamiento"
+    },
+    {
+      "code": "238312",
+      "name": "Trabajos de enyesado, empastado y tiroleado"
+    },
+    {
+      "code": "238320",
+      "name": "Trabajos de pintura y otros cubrimientos de paredes"
+    },
+    {
+      "code": "238330",
+      "name": "Colocación de pisos flexibles y de madera"
+    },
+    {
+      "code": "238340",
+      "name": "Colocación de pisos cerámicos y azulejos"
+    },
+    {
+      "code": "238350",
+      "name": "Realización de trabajos de carpintería en el lugar de la construcción"
+    },
+    {
+      "code": "238390",
+      "name": "Otros trabajos de acabados en edificaciones"
+    },
+    {
+      "code": "238910",
+      "name": "Preparación de terrenos para la construcción"
+    },
+    {
+      "code": "238990",
+      "name": "Otros trabajos especializados para la construcción"
+    },
+    {
+      "code": "311110",
+      "name": "Elaboración de alimentos balanceados para animales"
+    },
+    {
+      "code": "311211",
+      "name": "Beneficio del arroz"
+    },
+    {
+      "code": "311212",
+      "name": "Elaboración de harina de trigo"
+    },
+    {
+      "code": "311213",
+      "name": "Elaboración de harina de maíz"
+    },
+    {
+      "code": "311214",
+      "name": "Elaboración de harina de otros productos agrícolas"
+    },
+    {
+      "code": "311215",
+      "name": "Elaboración de malta"
+    },
+    {
+      "code": "311221",
+      "name": "Elaboración de féculas y otros almidones y sus derivados"
+    },
+    {
+      "code": "311222",
+      "name": "Elaboración de aceites y grasas vegetales comestibles"
+    },
+    {
+      "code": "311230",
+      "name": "Elaboración de cereales para el desayuno"
+    },
+    {
+      "code": "311311",
+      "name": "Elaboración de azúcar de caña"
+    },
+    {
+      "code": "311319",
+      "name": "Elaboración de otros azúcares"
+    },
+    {
+      "code": "311340",
+      "name": "Elaboración de dulces, chicles y productos de confitería que no sean de chocolate"
+    },
+    {
+      "code": "311350",
+      "name": "Elaboración de chocolate y productos de chocolate"
+    },
+    {
+      "code": "311411",
+      "name": "Congelación de frutas y verduras"
+    },
+    {
+      "code": "311412",
+      "name": "Congelación de guisos y otros alimentos preparados"
+    },
+    {
+      "code": "311421",
+      "name": "Deshidratación de frutas y verduras"
+    },
+    {
+      "code": "311422",
+      "name": "Conservación de frutas y verduras por procesos distintos a la congelación y la deshidratación"
+    },
+    {
+      "code": "311423",
+      "name": "Conservación de guisos y otros alimentos preparados por procesos distintos a la congelación"
+    },
+    {
+      "code": "311511",
+      "name": "Elaboración de leche líquida"
+    },
+    {
+      "code": "311512",
+      "name": "Elaboración de leche en polvo, condensada y evaporada"
+    },
+    {
+      "code": "311513",
+      "name": "Elaboración de derivados y fermentos lácteos"
+    },
+    {
+      "code": "311520",
+      "name": "Elaboración de helados y paletas"
+    },
+    {
+      "code": "311611",
+      "name": "Matanza de ganado, aves y otros animales comestibles"
+    },
+    {
+      "code": "311612",
+      "name": "Corte y empacado de carne de ganado, aves y otros animales comestibles"
+    },
+    {
+      "code": "311613",
+      "name": "Elaboración de embutidos y otras conservas de carne de ganado, aves y otros animales comestibles"
+    },
+    {
+      "code": "311614",
+      "name": "Elaboración de manteca y otras grasas animales comestibles"
+    },
+    {
+      "code": "311710",
+      "name": "Preparación y envasado de pescados y mariscos"
+    },
+    {
+      "code": "311811",
+      "name": "Panificación industrial"
+    },
+    {
+      "code": "311812",
+      "name": "Panificación tradicional"
+    },
+    {
+      "code": "311813",
+      "name": "Elaboración de tortillas de harina de trigo de forma tradicional"
+    },
+    {
+      "code": "311820",
+      "name": "Elaboración de galletas y pastas para sopa"
+    },
+    {
+      "code": "311830",
+      "name": "Elaboración de tortillas de maíz y molienda de nixtamal"
+    },
+    {
+      "code": "311910",
+      "name": "Elaboración de botanas"
+    },
+    {
+      "code": "311921",
+      "name": "Beneficio del café"
+    },
+    {
+      "code": "311922",
+      "name": "Elaboración de café tostado y molido destinado a unidades que lo comercializan"
+    },
+    {
+      "code": "311923",
+      "name": "Elaboración de café instantáneo"
+    },
+    {
+      "code": "311924",
+      "name": "Preparación y envasado de té"
+    },
+    {
+      "code": "311930",
+      "name": "Elaboración de concentrados, polvos, jarabes y esencias de sabor para bebidas"
+    },
+    {
+      "code": "311940",
+      "name": "Elaboración de condimentos y aderezos"
+    },
+    {
+      "code": "311991",
+      "name": "Elaboración de gelatinas y otros postres en polvo"
+    },
+    {
+      "code": "311992",
+      "name": "Elaboración de levadura"
+    },
+    {
+      "code": "311993",
+      "name": "Elaboración de alimentos frescos para consumo inmediato"
+    },
+    {
+      "code": "311999",
+      "name": "Elaboración de otros alimentos procesados y envasados"
+    },
+    {
+      "code": "312111",
+      "name": "Elaboración de refrescos y otras bebidas no alcohólicas"
+    },
+    {
+      "code": "312112",
+      "name": "Purificación y embotellado de agua"
+    },
+    {
+      "code": "312113",
+      "name": "Elaboración de hielo"
+    },
+    {
+      "code": "312120",
+      "name": "Elaboración de cerveza"
+    },
+    {
+      "code": "312131",
+      "name": "Elaboración de bebidas alcohólicas a base de uva"
+    },
+    {
+      "code": "312132",
+      "name": "Elaboración de pulque"
+    },
+    {
+      "code": "312139",
+      "name": "Elaboración de sidra y otras bebidas fermentadas"
+    },
+    {
+      "code": "312141",
+      "name": "Elaboración de ron y otras bebidas destiladas de caña"
+    },
+    {
+      "code": "312143",
+      "name": "Obtención de alcohol etílico potable"
+    },
+    {
+      "code": "312144",
+      "name": "Elaboración de tequila"
+    },
+    {
+      "code": "312145",
+      "name": "Elaboración de mezcal"
+    },
+    {
+      "code": "312149",
+      "name": "Elaboración de otras bebidas destiladas"
+    },
+    {
+      "code": "312210",
+      "name": "Beneficio del tabaco"
+    },
+    {
+      "code": "312221",
+      "name": "Elaboración de cigarros"
+    },
+    {
+      "code": "312222",
+      "name": "Elaboración de puros y otros productos de tabaco"
+    },
+    {
+      "code": "313111",
+      "name": "Preparación e hilado de fibras duras naturales"
+    },
+    {
+      "code": "313112",
+      "name": "Preparación e hilado de fibras blandas naturales"
+    },
+    {
+      "code": "313113",
+      "name": "Fabricación de hilos para coser y bordar"
+    },
+    {
+      "code": "313210",
+      "name": "Fabricación de telas anchas de tejido de trama"
+    },
+    {
+      "code": "313220",
+      "name": "Fabricación de telas angostas de tejido de trama y pasamanería"
+    },
+    {
+      "code": "313230",
+      "name": "Fabricación de telas no tejidas (comprimidas)"
+    },
+    {
+      "code": "313240",
+      "name": "Fabricación de telas de tejido de punto"
+    },
+    {
+      "code": "313310",
+      "name": "Acabado de productos textiles"
+    },
+    {
+      "code": "313320",
+      "name": "Fabricación de telas recubiertas"
+    },
+    {
+      "code": "314110",
+      "name": "Fabricación de alfombras y tapetes"
+    },
+    {
+      "code": "314120",
+      "name": "Confección de cortinas, blancos y similares"
+    },
+    {
+      "code": "314911",
+      "name": "Confección de costales"
+    },
+    {
+      "code": "314912",
+      "name": "Confección de productos de textiles recubiertos y de materiales sucedáneos"
+    },
+    {
+      "code": "314991",
+      "name": "Confección, bordado y deshilado de productos textiles"
+    },
+    {
+      "code": "314992",
+      "name": "Fabricación de redes y otros productos de cordelería"
+    },
+    {
+      "code": "314993",
+      "name": "Fabricación de borras y estopas"
+    },
+    {
+      "code": "314999",
+      "name": "Fabricación de banderas y otros productos textiles no clasificados en otra parte"
+    },
+    {
+      "code": "315121",
+      "name": "Fabricación de calcetines y medias de tejido de punto"
+    },
+    {
+      "code": "315122",
+      "name": "Fabricación de ropa interior de tejido de punto"
+    },
+    {
+      "code": "315123",
+      "name": "Fabricación de ropa exterior de tejido de punto"
+    },
+    {
+      "code": "315210",
+      "name": "Confección de prendas de vestir de cuero, piel y materiales sucedáneos"
+    },
+    {
+      "code": "315221",
+      "name": "Confección en serie de ropa interior y de dormir"
+    },
+    {
+      "code": "315222",
+      "name": "Confección en serie de camisas"
+    },
+    {
+      "code": "315223",
+      "name": "Confección en serie de uniformes"
+    },
+    {
+      "code": "315224",
+      "name": "Confección en serie de disfraces y trajes típicos"
+    },
+    {
+      "code": "315225",
+      "name": "Confección de prendas de vestir sobre medida"
+    },
+    {
+      "code": "315229",
+      "name": "Confección en serie de otra ropa exterior de materiales textiles"
+    },
+    {
+      "code": "315991",
+      "name": "Confección de sombreros y gorras"
+    },
+    {
+      "code": "315999",
+      "name": "Confección de otros accesorios y prendas de vestir no clasificados en otra parte"
+    },
+    {
+      "code": "316110",
+      "name": "Curtido y acabado de cuero y piel"
+    },
+    {
+      "code": "316211",
+      "name": "Fabricación de calzado con corte de piel y cuero"
+    },
+    {
+      "code": "316212",
+      "name": "Fabricación de calzado con corte de tela"
+    },
+    {
+      "code": "316213",
+      "name": "Fabricación de calzado de plástico"
+    },
+    {
+      "code": "316214",
+      "name": "Fabricación de calzado de hule"
+    },
+    {
+      "code": "316219",
+      "name": "Fabricación de huaraches y calzado de otro tipo de materiales"
+    },
+    {
+      "code": "316991",
+      "name": "Fabricación de bolsos de mano, maletas y similares"
+    },
+    {
+      "code": "316999",
+      "name": "Fabricación de otros productos de cuero, piel y materiales sucedáneos"
+    },
+    {
+      "code": "321111",
+      "name": "Aserraderos integrados"
+    },
+    {
+      "code": "321112",
+      "name": "Aserrado de tablas y tablones"
+    },
+    {
+      "code": "321113",
+      "name": "Tratamiento de la madera y fabricación de postes y durmientes"
+    },
+    {
+      "code": "321210",
+      "name": "Fabricación de laminados y aglutinados de madera"
+    },
+    {
+      "code": "321910",
+      "name": "Fabricación de productos de madera para la construcción"
+    },
+    {
+      "code": "321920",
+      "name": "Fabricación de productos para embalaje y envases de madera"
+    },
+    {
+      "code": "321991",
+      "name": "Fabricación de productos de materiales trenzables, excepto palma"
+    },
+    {
+      "code": "321992",
+      "name": "Fabricación de artículos y utensilios de madera para el hogar"
+    },
+    {
+      "code": "321993",
+      "name": "Fabricación de productos de madera de uso industrial"
+    },
+    {
+      "code": "321999",
+      "name": "Fabricación de otros productos de madera"
+    },
+    {
+      "code": "322110",
+      "name": "Fabricación de pulpa"
+    },
+    {
+      "code": "322121",
+      "name": "Fabricación de papel en plantas integradas"
+    },
+    {
+      "code": "322122",
+      "name": "Fabricación de papel a partir de pulpa"
+    },
+    {
+      "code": "322131",
+      "name": "Fabricación de cartón en plantas integradas"
+    },
+    {
+      "code": "322132",
+      "name": "Fabricación de cartón y cartoncillo a partir de pulpa"
+    },
+    {
+      "code": "322210",
+      "name": "Fabricación de envases de cartón"
+    },
+    {
+      "code": "322220",
+      "name": "Fabricación de bolsas de papel y productos celulósicos recubiertos y tratados"
+    },
+    {
+      "code": "322230",
+      "name": "Fabricación de productos de papelería"
+    },
+    {
+      "code": "322291",
+      "name": "Fabricación de pañales desechables y productos sanitarios"
+    },
+    {
+      "code": "322299",
+      "name": "Fabricación de otros productos de cartón y papel"
+    },
+    {
+      "code": "323111",
+      "name": "Impresión de libros, periódicos y revistas"
+    },
+    {
+      "code": "323119",
+      "name": "Impresión de formas continuas y otros impresos"
+    },
+    {
+      "code": "323120",
+      "name": "Industrias conexas a la impresión"
+    },
+    {
+      "code": "324110",
+      "name": "Refinación de petróleo"
+    },
+    {
+      "code": "324120",
+      "name": "Fabricación de productos de asfalto"
+    },
+    {
+      "code": "324191",
+      "name": "Fabricación de aceites y grasas lubricantes"
+    },
+    {
+      "code": "324199",
+      "name": "Fabricación de coque y otros productos derivados del petróleo refinado y del carbón mineral"
+    },
+    {
+      "code": "325110",
+      "name": "Fabricación de petroquímicos básicos del gas natural y del petróleo refinado"
+    },
+    {
+      "code": "325120",
+      "name": "Fabricación de gases industriales"
+    },
+    {
+      "code": "325130",
+      "name": "Fabricación de pigmentos y colorantes sintéticos"
+    },
+    {
+      "code": "325180",
+      "name": "Fabricación de otros productos químicos básicos inorgánicos"
+    },
+    {
+      "code": "325190",
+      "name": "Fabricación de otros productos químicos básicos orgánicos"
+    },
+    {
+      "code": "325211",
+      "name": "Fabricación de resinas sintéticas"
+    },
+    {
+      "code": "325212",
+      "name": "Fabricación de hules sintéticos"
+    },
+    {
+      "code": "325220",
+      "name": "Fabricación de fibras químicas"
+    },
+    {
+      "code": "325310",
+      "name": "Fabricación de fertilizantes y composta"
+    },
+    {
+      "code": "325320",
+      "name": "Fabricación de plaguicidas y otros agroquímicos, excepto fertilizantes y composta"
+    },
+    {
+      "code": "325411",
+      "name": "Fabricación de materias primas para la industria farmacéutica"
+    },
+    {
+      "code": "325412",
+      "name": "Fabricación de preparaciones farmacéuticas"
+    },
+    {
+      "code": "325510",
+      "name": "Fabricación de pinturas y recubrimientos"
+    },
+    {
+      "code": "325520",
+      "name": "Fabricación de adhesivos"
+    },
+    {
+      "code": "325610",
+      "name": "Fabricación de jabones, limpiadores y dentífricos"
+    },
+    {
+      "code": "325620",
+      "name": "Fabricación de cosméticos, perfumes y otras preparaciones de tocador"
+    },
+    {
+      "code": "325910",
+      "name": "Fabricación de tintas para impresión"
+    },
+    {
+      "code": "325920",
+      "name": "Fabricación de explosivos"
+    },
+    {
+      "code": "325991",
+      "name": "Fabricación de cerillos"
+    },
+    {
+      "code": "325992",
+      "name": "Fabricación de películas, placas y papel fotosensible para fotografía"
+    },
+    {
+      "code": "325993",
+      "name": "Fabricación de resinas de plásticos reciclados"
+    },
+    {
+      "code": "325999",
+      "name": "Fabricación de otros productos químicos"
+    },
+    {
+      "code": "326110",
+      "name": "Fabricación de bolsas y películas de plástico"
+    },
+    {
+      "code": "326120",
+      "name": "Fabricación de tubería y conexiones, y tubos para embalaje"
+    },
+    {
+      "code": "326130",
+      "name": "Fabricación de laminados de plástico"
+    },
+    {
+      "code": "326140",
+      "name": "Fabricación de espumas y productos de poliestireno"
+    },
+    {
+      "code": "326150",
+      "name": "Fabricación de espumas y productos de uretano"
+    },
+    {
+      "code": "326160",
+      "name": "Fabricación de botellas de plástico"
+    },
+    {
+      "code": "326191",
+      "name": "Fabricación de productos de plástico para el hogar con y sin reforzamiento"
+    },
+    {
+      "code": "326192",
+      "name": "Fabricación de autopartes de plástico con y sin reforzamiento"
+    },
+    {
+      "code": "326193",
+      "name": "Fabricación de envases y contenedores de plástico para embalaje con y sin reforzamiento"
+    },
+    {
+      "code": "326194",
+      "name": "Fabricación de otros productos de plástico de uso industrial sin reforzamiento"
+    },
+    {
+      "code": "326198",
+      "name": "Fabricación de otros productos de plástico con reforzamiento"
+    },
+    {
+      "code": "326199",
+      "name": "Fabricación de otros productos de plástico sin reforzamiento"
+    },
+    {
+      "code": "326211",
+      "name": "Fabricación de llantas y cámaras"
+    },
+    {
+      "code": "326212",
+      "name": "Revitalización de llantas"
+    },
+    {
+      "code": "326220",
+      "name": "Fabricación de bandas y mangueras de hule y de plástico"
+    },
+    {
+      "code": "326290",
+      "name": "Fabricación de otros productos de hule"
+    },
+    {
+      "code": "327111",
+      "name": "Fabricación de artículos de alfarería, porcelana y loza"
+    },
+    {
+      "code": "327112",
+      "name": "Fabricación de muebles de baño"
+    },
+    {
+      "code": "327121",
+      "name": "Fabricación de ladrillos no refractarios"
+    },
+    {
+      "code": "327122",
+      "name": "Fabricación de azulejos y losetas no refractarias"
+    },
+    {
+      "code": "327123",
+      "name": "Fabricación de productos refractarios"
+    },
+    {
+      "code": "327211",
+      "name": "Fabricación de vidrio"
+    },
+    {
+      "code": "327212",
+      "name": "Fabricación de espejos"
+    },
+    {
+      "code": "327213",
+      "name": "Fabricación de envases y ampolletas de vidrio"
+    },
+    {
+      "code": "327214",
+      "name": "Fabricación de fibra de vidrio"
+    },
+    {
+      "code": "327215",
+      "name": "Fabricación de artículos de vidrio de uso doméstico"
+    },
+    {
+      "code": "327216",
+      "name": "Fabricación de artículos de vidrio de uso industrial y comercial"
+    },
+    {
+      "code": "327219",
+      "name": "Fabricación de otros productos de vidrio"
+    },
+    {
+      "code": "327310",
+      "name": "Fabricación de cemento y productos a base de cemento en plantas integradas"
+    },
+    {
+      "code": "327320",
+      "name": "Fabricación de concreto"
+    },
+    {
+      "code": "327330",
+      "name": "Fabricación de tubos y bloques de cemento y concreto"
+    },
+    {
+      "code": "327391",
+      "name": "Fabricación de productos preesforzados de concreto"
+    },
+    {
+      "code": "327399",
+      "name": "Fabricación de otros productos de cemento y concreto"
+    },
+    {
+      "code": "327410",
+      "name": "Fabricación de cal"
+    },
+    {
+      "code": "327420",
+      "name": "Fabricación de yeso y productos de yeso"
+    },
+    {
+      "code": "327910",
+      "name": "Fabricación de productos abrasivos"
+    },
+    {
+      "code": "327991",
+      "name": "Fabricación de productos a base de piedras de cantera"
+    },
+    {
+      "code": "327999",
+      "name": "Fabricación de otros productos a base de minerales no metálicos"
+    },
+    {
+      "code": "331111",
+      "name": "Complejos siderúrgicos"
+    },
+    {
+      "code": "331112",
+      "name": "Fabricación de desbastes primarios y ferroaleaciones"
+    },
+    {
+      "code": "331210",
+      "name": "Fabricación de tubos y postes de hierro y acero"
+    },
+    {
+      "code": "331220",
+      "name": "Fabricación de otros productos de hierro y acero"
+    },
+    {
+      "code": "331310",
+      "name": "Industria básica del aluminio"
+    },
+    {
+      "code": "331411",
+      "name": "Fundición y refinación de cobre"
+    },
+    {
+      "code": "331412",
+      "name": "Fundición y refinación de metales preciosos"
+    },
+    {
+      "code": "331419",
+      "name": "Fundición y refinación de otros metales no ferrosos"
+    },
+    {
+      "code": "331420",
+      "name": "Laminación secundaria de cobre"
+    },
+    {
+      "code": "331490",
+      "name": "Laminación secundaria de otros metales no ferrosos"
+    },
+    {
+      "code": "331510",
+      "name": "Moldeo por fundición de piezas de hierro y acero"
+    },
+    {
+      "code": "331520",
+      "name": "Moldeo por fundición de piezas metálicas no ferrosas"
+    },
+    {
+      "code": "332110",
+      "name": "Fabricación de productos metálicos forjados y troquelados"
+    },
+    {
+      "code": "332211",
+      "name": "Fabricación de herramientas de mano metálicas sin motor"
+    },
+    {
+      "code": "332212",
+      "name": "Fabricación de utensilios de cocina metálicos"
+    },
+    {
+      "code": "332310",
+      "name": "Fabricación de estructuras metálicas"
+    },
+    {
+      "code": "332320",
+      "name": "Fabricación de productos de herrería"
+    },
+    {
+      "code": "332410",
+      "name": "Fabricación de calderas industriales"
+    },
+    {
+      "code": "332420",
+      "name": "Fabricación de tanques metálicos de calibre grueso"
+    },
+    {
+      "code": "332430",
+      "name": "Fabricación de envases metálicos de calibre ligero"
+    },
+    {
+      "code": "332510",
+      "name": "Fabricación de herrajes y cerraduras"
+    },
+    {
+      "code": "332610",
+      "name": "Fabricación de alambre, productos de alambre y resortes"
+    },
+    {
+      "code": "332710",
+      "name": "Maquinado de piezas para maquinaria y equipo en general"
+    },
+    {
+      "code": "332720",
+      "name": "Fabricación de tornillos, tuercas, remaches y similares"
+    },
+    {
+      "code": "332810",
+      "name": "Recubrimientos y terminados metálicos"
+    },
+    {
+      "code": "332910",
+      "name": "Fabricación de válvulas metálicas"
+    },
+    {
+      "code": "332991",
+      "name": "Fabricación de baleros o rodamientos"
+    },
+    {
+      "code": "332999",
+      "name": "Fabricación de otros productos metálicos"
+    },
+    {
+      "code": "333111",
+      "name": "Fabricación de maquinaria y equipo agrícola"
+    },
+    {
+      "code": "333112",
+      "name": "Fabricación de maquinaria y equipo pecuario"
+    },
+    {
+      "code": "333120",
+      "name": "Fabricación de maquinaria y equipo para la construcción"
+    },
+    {
+      "code": "333130",
+      "name": "Fabricación de maquinaria y equipo para la industria extractiva"
+    },
+    {
+      "code": "333241",
+      "name": "Fabricación de maquinaria y equipo para la industria de la madera"
+    },
+    {
+      "code": "333242",
+      "name": "Fabricación de maquinaria y equipo para la industria del hule y del plástico"
+    },
+    {
+      "code": "333243",
+      "name": "Fabricación de maquinaria y equipo para la industria alimentaria y de las bebidas"
+    },
+    {
+      "code": "333244",
+      "name": "Fabricación de maquinaria y equipo para la industria textil"
+    },
+    {
+      "code": "333245",
+      "name": "Fabricación de maquinaria y equipo para la industria de la impresión"
+    },
+    {
+      "code": "333246",
+      "name": "Fabricación de maquinaria y equipo para la industria del vidrio y otros minerales no metálicos"
+    },
+    {
+      "code": "333249",
+      "name": "Fabricación de maquinaria y equipo para otras industrias manufactureras"
+    },
+    {
+      "code": "333311",
+      "name": "Fabricación de aparatos fotográficos"
+    },
+    {
+      "code": "333312",
+      "name": "Fabricación de máquinas fotocopiadoras"
+    },
+    {
+      "code": "333319",
+      "name": "Fabricación de otra maquinaria y equipo para el comercio y los servicios"
+    },
+    {
+      "code": "333411",
+      "name": "Fabricación de equipo de aire acondicionado y calefacción"
+    },
+    {
+      "code": "333412",
+      "name": "Fabricación de equipo de refrigeración industrial y comercial"
+    },
+    {
+      "code": "333510",
+      "name": "Fabricación de maquinaria y equipo para la industria metalmecánica"
+    },
+    {
+      "code": "333610",
+      "name": "Fabricación de motores de combustión interna, turbinas y transmisiones"
+    },
+    {
+      "code": "333910",
+      "name": "Fabricación de bombas y sistemas de bombeo"
+    },
+    {
+      "code": "333920",
+      "name": "Fabricación de maquinaria y equipo para levantar y trasladar"
+    },
+    {
+      "code": "333991",
+      "name": "Fabricación de equipo para soldar y soldaduras"
+    },
+    {
+      "code": "333992",
+      "name": "Fabricación de maquinaria y equipo para envasar y empacar"
+    },
+    {
+      "code": "333993",
+      "name": "Fabricación de aparatos e instrumentos para pesar"
+    },
+    {
+      "code": "333999",
+      "name": "Fabricación de otra maquinaria y equipo para la industria en general"
+    },
+    {
+      "code": "334110",
+      "name": "Fabricación de computadoras y equipo periférico"
+    },
+    {
+      "code": "334210",
+      "name": "Fabricación de equipo telefónico"
+    },
+    {
+      "code": "334220",
+      "name": "Fabricación de equipo de transmisión y recepción de señales de radio y televisión, y equipo de comunicación inalámbrico"
+    },
+    {
+      "code": "334290",
+      "name": "Fabricación de otros equipos de comunicación"
+    },
+    {
+      "code": "334310",
+      "name": "Fabricación de equipo de audio y de video"
+    },
+    {
+      "code": "334410",
+      "name": "Fabricación de componentes electrónicos"
+    },
+    {
+      "code": "334511",
+      "name": "Fabricación de relojes"
+    },
+    {
+      "code": "334519",
+      "name": "Fabricación de otros instrumentos de medición, control, navegación, y equipo médico electrónico"
+    },
+    {
+      "code": "334610",
+      "name": "Fabricación y reproducción de medios magnéticos y ópticos"
+    },
+    {
+      "code": "335131",
+      "name": "Fabricación de focos"
+    },
+    {
+      "code": "335132",
+      "name": "Fabricación de lámparas ornamentales"
+    },
+    {
+      "code": "335210",
+      "name": "Fabricación de enseres electrodomésticos menores"
+    },
+    {
+      "code": "335220",
+      "name": "Fabricación de aparatos de línea blanca"
+    },
+    {
+      "code": "335311",
+      "name": "Fabricación de motores y generadores eléctricos"
+    },
+    {
+      "code": "335312",
+      "name": "Fabricación de equipo y aparatos de distribución de energía eléctrica"
+    },
+    {
+      "code": "335910",
+      "name": "Fabricación de acumuladores y pilas"
+    },
+    {
+      "code": "335920",
+      "name": "Fabricación de cables de conducción eléctrica"
+    },
+    {
+      "code": "335930",
+      "name": "Fabricación de enchufes, contactos, fusibles y otros accesorios para instalaciones eléctricas"
+    },
+    {
+      "code": "335991",
+      "name": "Fabricación de productos eléctricos de carbón y grafito"
+    },
+    {
+      "code": "335999",
+      "name": "Fabricación de otros productos eléctricos"
+    },
+    {
+      "code": "336110",
+      "name": "Fabricación de automóviles y camionetas"
+    },
+    {
+      "code": "336120",
+      "name": "Fabricación de camiones y tractocamiones"
+    },
+    {
+      "code": "336210",
+      "name": "Fabricación de carrocerías y remolques"
+    },
+    {
+      "code": "336310",
+      "name": "Fabricación de motores y sus partes para vehículos automotrices"
+    },
+    {
+      "code": "336320",
+      "name": "Fabricación de equipo eléctrico y electrónico y sus partes para vehículos automotores"
+    },
+    {
+      "code": "336330",
+      "name": "Fabricación de partes de sistemas de dirección y de suspensión para vehículos automotrices"
+    },
+    {
+      "code": "336340",
+      "name": "Fabricación de partes de sistemas de frenos para vehículos automotrices"
+    },
+    {
+      "code": "336350",
+      "name": "Fabricación de partes de sistemas de transmisión para vehículos automotores"
+    },
+    {
+      "code": "336360",
+      "name": "Fabricación de asientos y accesorios interiores para vehículos automotores"
+    },
+    {
+      "code": "336370",
+      "name": "Fabricación de piezas metálicas troqueladas para vehículos automotrices"
+    },
+    {
+      "code": "336390",
+      "name": "Fabricación de otras partes para vehículos automotrices"
+    },
+    {
+      "code": "336410",
+      "name": "Fabricación de equipo aeroespacial"
+    },
+    {
+      "code": "336510",
+      "name": "Fabricación de equipo ferroviario"
+    },
+    {
+      "code": "336610",
+      "name": "Fabricación de embarcaciones"
+    },
+    {
+      "code": "336991",
+      "name": "Fabricación de motocicletas"
+    },
+    {
+      "code": "336992",
+      "name": "Fabricación de bicicletas y triciclos"
+    },
+    {
+      "code": "336999",
+      "name": "Fabricación de otro equipo de transporte"
+    },
+    {
+      "code": "337110",
+      "name": "Fabricación de cocinas integrales y muebles modulares de baño"
+    },
+    {
+      "code": "337120",
+      "name": "Fabricación de muebles, excepto cocinas integrales, muebles modulares de baño y muebles de oficina y estantería"
+    },
+    {
+      "code": "337210",
+      "name": "Fabricación de muebles de oficina y estantería"
+    },
+    {
+      "code": "337910",
+      "name": "Fabricación de colchones"
+    },
+    {
+      "code": "337920",
+      "name": "Fabricación de persianas y cortineros"
+    },
+    {
+      "code": "339111",
+      "name": "Fabricación de equipo no electrónico para uso médico, dental y para laboratorio"
+    },
+    {
+      "code": "339112",
+      "name": "Fabricación de material desechable de uso médico"
+    },
+    {
+      "code": "339113",
+      "name": "Fabricación de artículos oftálmicos"
+    },
+    {
+      "code": "339911",
+      "name": "Acuñación e impresión de monedas"
+    },
+    {
+      "code": "339912",
+      "name": "Orfebrería y joyería de metales y piedras preciosos"
+    },
+    {
+      "code": "339913",
+      "name": "Joyería de metales y piedras no preciosos y de otros materiales"
+    },
+    {
+      "code": "339914",
+      "name": "Metalistería de metales no preciosos"
+    },
+    {
+      "code": "339920",
+      "name": "Fabricación de artículos deportivos"
+    },
+    {
+      "code": "339930",
+      "name": "Fabricación de juguetes"
+    },
+    {
+      "code": "339940",
+      "name": "Fabricación de artículos y accesorios para escritura, pintura, dibujo y actividades de oficina"
+    },
+    {
+      "code": "339950",
+      "name": "Fabricación de anuncios y señalamientos"
+    },
+    {
+      "code": "339991",
+      "name": "Fabricación de instrumentos musicales"
+    },
+    {
+      "code": "339992",
+      "name": "Fabricación de cierres, botones y agujas"
+    },
+    {
+      "code": "339993",
+      "name": "Fabricación de escobas, cepillos y similares"
+    },
+    {
+      "code": "339994",
+      "name": "Fabricación de velas y veladoras"
+    },
+    {
+      "code": "339995",
+      "name": "Fabricación de ataúdes"
+    },
+    {
+      "code": "339999",
+      "name": "Otras industrias manufactureras"
+    },
+    {
+      "code": "431110",
+      "name": "Comercio al por mayor de abarrotes"
+    },
+    {
+      "code": "431121",
+      "name": "Comercio al por mayor de carnes rojas"
+    },
+    {
+      "code": "431122",
+      "name": "Comercio al por mayor de carne de aves"
+    },
+    {
+      "code": "431123",
+      "name": "Comercio al por mayor de pescados y mariscos"
+    },
+    {
+      "code": "431130",
+      "name": "Comercio al por mayor de frutas y verduras frescas"
+    },
+    {
+      "code": "431140",
+      "name": "Comercio al por mayor de huevo"
+    },
+    {
+      "code": "431150",
+      "name": "Comercio al por mayor de semillas y granos alimenticios, especias y chiles secos"
+    },
+    {
+      "code": "431160",
+      "name": "Comercio al por mayor de leche y otros productos lácteos"
+    },
+    {
+      "code": "431170",
+      "name": "Comercio al por mayor de embutidos"
+    },
+    {
+      "code": "431180",
+      "name": "Comercio al por mayor de dulces y materias primas para repostería"
+    },
+    {
+      "code": "431191",
+      "name": "Comercio al por mayor de pan y pasteles"
+    },
+    {
+      "code": "431192",
+      "name": "Comercio al por mayor de botanas y frituras"
+    },
+    {
+      "code": "431193",
+      "name": "Comercio al por mayor de conservas alimenticias"
+    },
+    {
+      "code": "431194",
+      "name": "Comercio al por mayor de miel"
+    },
+    {
+      "code": "431199",
+      "name": "Comercio al por mayor de otros alimentos"
+    },
+    {
+      "code": "431211",
+      "name": "Comercio al por mayor de bebidas no alcohólicas y hielo"
+    },
+    {
+      "code": "431212",
+      "name": "Comercio al por mayor de vinos y licores"
+    },
+    {
+      "code": "431213",
+      "name": "Comercio al por mayor de cerveza"
+    },
+    {
+      "code": "431220",
+      "name": "Comercio al por mayor de cigarros, puros y tabaco"
+    },
+    {
+      "code": "432111",
+      "name": "Comercio al por mayor de fibras, hilos y telas"
+    },
+    {
+      "code": "432112",
+      "name": "Comercio al por mayor de blancos"
+    },
+    {
+      "code": "432113",
+      "name": "Comercio al por mayor de cueros y pieles"
+    },
+    {
+      "code": "432119",
+      "name": "Comercio al por mayor de otros productos textiles"
+    },
+    {
+      "code": "432120",
+      "name": "Comercio al por mayor de ropa, bisutería y accesorios de vestir"
+    },
+    {
+      "code": "432130",
+      "name": "Comercio al por mayor de calzado"
+    },
+    {
+      "code": "433110",
+      "name": "Comercio al por mayor de productos farmacéuticos"
+    },
+    {
+      "code": "433210",
+      "name": "Comercio al por mayor de artículos de perfumería y cosméticos"
+    },
+    {
+      "code": "433220",
+      "name": "Comercio al por mayor de artículos de joyería y relojes"
+    },
+    {
+      "code": "433311",
+      "name": "Comercio al por mayor de grabaciones de audio y video en medios físicos"
+    },
+    {
+      "code": "433312",
+      "name": "Comercio al por mayor de juguetes y bicicletas"
+    },
+    {
+      "code": "433313",
+      "name": "Comercio al por mayor de artículos y aparatos deportivos"
+    },
+    {
+      "code": "433410",
+      "name": "Comercio al por mayor de artículos de papelería"
+    },
+    {
+      "code": "433420",
+      "name": "Comercio al por mayor de libros"
+    },
+    {
+      "code": "433430",
+      "name": "Comercio al por mayor de revistas y periódicos"
+    },
+    {
+      "code": "433510",
+      "name": "Comercio al por mayor de electrodomésticos menores y aparatos de línea blanca"
+    },
+    {
+      "code": "434111",
+      "name": "Comercio al por mayor de fertilizantes, plaguicidas y semillas para siembra"
+    },
+    {
+      "code": "434112",
+      "name": "Comercio al por mayor de medicamentos veterinarios y alimentos para animales, excepto mascotas"
+    },
+    {
+      "code": "434211",
+      "name": "Comercio al por mayor de cemento, tabique y grava"
+    },
+    {
+      "code": "434219",
+      "name": "Comercio al por mayor de otros materiales para la construcción, excepto de madera y metálicos"
+    },
+    {
+      "code": "434221",
+      "name": "Comercio al por mayor de materiales metálicos para la construcción y la manufactura"
+    },
+    {
+      "code": "434222",
+      "name": "Comercio al por mayor de productos químicos para la industria farmacéutica y para otro uso industrial"
+    },
+    {
+      "code": "434223",
+      "name": "Comercio al por mayor de envases en general, papel y cartón para la industria"
+    },
+    {
+      "code": "434224",
+      "name": "Comercio al por mayor de madera para la construcción y la industria"
+    },
+    {
+      "code": "434225",
+      "name": "Comercio al por mayor de equipo y material eléctrico"
+    },
+    {
+      "code": "434226",
+      "name": "Comercio al por mayor de pintura"
+    },
+    {
+      "code": "434227",
+      "name": "Comercio al por mayor de vidrios y espejos"
+    },
+    {
+      "code": "434228",
+      "name": "Comercio al por mayor de ganado y aves en pie"
+    },
+    {
+      "code": "434229",
+      "name": "Comercio al por mayor de otras materias primas para otras industrias"
+    },
+    {
+      "code": "434230",
+      "name": "Comercio al por mayor de combustibles"
+    },
+    {
+      "code": "434240",
+      "name": "Comercio al por mayor de artículos desechables"
+    },
+    {
+      "code": "434311",
+      "name": "Comercio al por mayor de desechos metálicos"
+    },
+    {
+      "code": "434312",
+      "name": "Comercio al por mayor de desechos de papel y de cartón"
+    },
+    {
+      "code": "434313",
+      "name": "Comercio al por mayor de desechos de vidrio"
+    },
+    {
+      "code": "434314",
+      "name": "Comercio al por mayor de desechos de plástico"
+    },
+    {
+      "code": "434319",
+      "name": "Comercio al por mayor de otros materiales de desecho"
+    },
+    {
+      "code": "435110",
+      "name": "Comercio al por mayor de maquinaria y equipo agropecuario, forestal y para la pesca"
+    },
+    {
+      "code": "435210",
+      "name": "Comercio al por mayor de maquinaria y equipo para la construcción y la minería"
+    },
+    {
+      "code": "435220",
+      "name": "Comercio al por mayor de maquinaria y equipo para la industria manufacturera"
+    },
+    {
+      "code": "435311",
+      "name": "Comercio al por mayor de equipo de telecomunicaciones, fotografía y cinematografía"
+    },
+    {
+      "code": "435312",
+      "name": "Comercio al por mayor de artículos y accesorios para diseño y pintura artística"
+    },
+    {
+      "code": "435313",
+      "name": "Comercio al por mayor de mobiliario, equipo e instrumental médico y de laboratorio"
+    },
+    {
+      "code": "435319",
+      "name": "Comercio al por mayor de maquinaria y equipo para otros servicios y para actividades comerciales"
+    },
+    {
+      "code": "435411",
+      "name": "Comercio al por mayor de mobiliario, equipo, y accesorios de cómputo"
+    },
+    {
+      "code": "435412",
+      "name": "Comercio al por mayor de mobiliario y equipo de oficina"
+    },
+    {
+      "code": "435419",
+      "name": "Comercio al por mayor de otra maquinaria y equipo de uso general"
+    },
+    {
+      "code": "436111",
+      "name": "Comercio al por mayor de camiones"
+    },
+    {
+      "code": "436112",
+      "name": "Comercio al por mayor de partes y refacciones nuevas para automóviles, camionetas y camiones"
+    },
+    {
+      "code": "437311",
+      "name": "Intermediación de comercio al por mayor de productos agropecuarios"
+    },
+    {
+      "code": "437312",
+      "name": "Intermediación de comercio al por mayor de productos para la industria, el comercio y los servicios"
+    },
+    {
+      "code": "437313",
+      "name": "Intermediación de comercio al por mayor de productos de uso doméstico y personal"
+    },
+    {
+      "code": "461110",
+      "name": "Comercio al por menor en tiendas de abarrotes, ultramarinos y misceláneas"
+    },
+    {
+      "code": "461121",
+      "name": "Comercio al por menor de carnes rojas"
+    },
+    {
+      "code": "461122",
+      "name": "Comercio al por menor de carne de aves"
+    },
+    {
+      "code": "461123",
+      "name": "Comercio al por menor de pescados y mariscos"
+    },
+    {
+      "code": "461130",
+      "name": "Comercio al por menor de frutas y verduras frescas"
+    },
+    {
+      "code": "461140",
+      "name": "Comercio al por menor de semillas y granos alimenticios, especias y chiles secos"
+    },
+    {
+      "code": "461150",
+      "name": "Comercio al por menor de leche, otros productos lácteos y embutidos"
+    },
+    {
+      "code": "461160",
+      "name": "Comercio al por menor de dulces y materias primas para repostería"
+    },
+    {
+      "code": "461170",
+      "name": "Comercio al por menor de paletas de hielo y helados"
+    },
+    {
+      "code": "461190",
+      "name": "Comercio al por menor de otros alimentos"
+    },
+    {
+      "code": "461211",
+      "name": "Comercio al por menor de vinos y licores"
+    },
+    {
+      "code": "461212",
+      "name": "Comercio al por menor de cerveza"
+    },
+    {
+      "code": "461213",
+      "name": "Comercio al por menor de bebidas no alcohólicas y hielo"
+    },
+    {
+      "code": "461220",
+      "name": "Comercio al por menor de cigarros, puros y tabaco"
+    },
+    {
+      "code": "462111",
+      "name": "Comercio al por menor en supermercados"
+    },
+    {
+      "code": "462112",
+      "name": "Comercio al por menor en minisupers"
+    },
+    {
+      "code": "462210",
+      "name": "Comercio al por menor en tiendas departamentales"
+    },
+    {
+      "code": "463111",
+      "name": "Comercio al por menor de telas"
+    },
+    {
+      "code": "463112",
+      "name": "Comercio al por menor de blancos"
+    },
+    {
+      "code": "463113",
+      "name": "Comercio al por menor de artículos de mercería y bonetería"
+    },
+    {
+      "code": "463211",
+      "name": "Comercio al por menor de ropa, excepto de bebé y lencería"
+    },
+    {
+      "code": "463212",
+      "name": "Comercio al por menor de ropa de bebé"
+    },
+    {
+      "code": "463213",
+      "name": "Comercio al por menor de lencería"
+    },
+    {
+      "code": "463214",
+      "name": "Comercio al por menor de disfraces, trajes típicos y vestidos de novia"
+    },
+    {
+      "code": "463215",
+      "name": "Comercio al por menor de bisutería y accesorios de vestir"
+    },
+    {
+      "code": "463216",
+      "name": "Comercio al por menor de ropa de cuero y piel y de otros artículos de estos materiales"
+    },
+    {
+      "code": "463217",
+      "name": "Comercio al por menor de pañales desechables"
+    },
+    {
+      "code": "463218",
+      "name": "Comercio al por menor de sombreros"
+    },
+    {
+      "code": "463310",
+      "name": "Comercio al por menor de calzado"
+    },
+    {
+      "code": "464111",
+      "name": "Farmacias sin minisúper"
+    },
+    {
+      "code": "464112",
+      "name": "Farmacias con minisúper"
+    },
+    {
+      "code": "464113",
+      "name": "Comercio al por menor de productos naturistas, medicamentos homeopáticos y de complementos alimenticios"
+    },
+    {
+      "code": "464121",
+      "name": "Comercio al por menor de lentes"
+    },
+    {
+      "code": "464122",
+      "name": "Comercio al por menor de artículos ortopédicos"
+    },
+    {
+      "code": "465111",
+      "name": "Comercio al por menor de artículos de perfumería y cosméticos"
+    },
+    {
+      "code": "465112",
+      "name": "Comercio al por menor de artículos de joyería y relojes"
+    },
+    {
+      "code": "465211",
+      "name": "Comercio al por menor de grabaciones de audio y video en medios físicos"
+    },
+    {
+      "code": "465212",
+      "name": "Comercio al por menor de juguetes"
+    },
+    {
+      "code": "465213",
+      "name": "Comercio al por menor de bicicletas y triciclos"
+    },
+    {
+      "code": "465214",
+      "name": "Comercio al por menor de equipo y material fotográfico"
+    },
+    {
+      "code": "465215",
+      "name": "Comercio al por menor de artículos y aparatos deportivos"
+    },
+    {
+      "code": "465216",
+      "name": "Comercio al por menor de instrumentos musicales"
+    },
+    {
+      "code": "465311",
+      "name": "Comercio al por menor de artículos de papelería"
+    },
+    {
+      "code": "465312",
+      "name": "Comercio al por menor de libros"
+    },
+    {
+      "code": "465313",
+      "name": "Comercio al por menor de revistas y periódicos"
+    },
+    {
+      "code": "465911",
+      "name": "Comercio al por menor de mascotas y sus accesorios"
+    },
+    {
+      "code": "465912",
+      "name": "Comercio al por menor de regalos"
+    },
+    {
+      "code": "465913",
+      "name": "Comercio al por menor de artículos religiosos"
+    },
+    {
+      "code": "465914",
+      "name": "Comercio al por menor de artículos desechables"
+    },
+    {
+      "code": "465915",
+      "name": "Comercio al por menor en tiendas de artesanías"
+    },
+    {
+      "code": "465919",
+      "name": "Comercio al por menor de otros artículos de uso personal"
+    },
+    {
+      "code": "466111",
+      "name": "Comercio al por menor de muebles para el hogar"
+    },
+    {
+      "code": "466112",
+      "name": "Comercio al por menor de electrodomésticos menores y aparatos de línea blanca"
+    },
+    {
+      "code": "466113",
+      "name": "Comercio al por menor de muebles para jardín"
+    },
+    {
+      "code": "466114",
+      "name": "Comercio al por menor de cristalería, loza y utensilios de cocina"
+    },
+    {
+      "code": "466211",
+      "name": "Comercio al por menor de mobiliario, equipo y accesorios de cómputo"
+    },
+    {
+      "code": "466212",
+      "name": "Comercio al por menor de teléfonos y otros aparatos de comunicación"
+    },
+    {
+      "code": "466311",
+      "name": "Comercio al por menor de alfombras, cortinas, tapices y similares"
+    },
+    {
+      "code": "466312",
+      "name": "Comercio al por menor de plantas y flores naturales"
+    },
+    {
+      "code": "466313",
+      "name": "Comercio al por menor de antigüedades y obras de arte"
+    },
+    {
+      "code": "466314",
+      "name": "Comercio al por menor de lámparas ornamentales y candiles"
+    },
+    {
+      "code": "466319",
+      "name": "Comercio al por menor de otros artículos para la decoración de interiores"
+    },
+    {
+      "code": "466410",
+      "name": "Comercio al por menor de artículos usados"
+    },
+    {
+      "code": "467111",
+      "name": "Comercio al por menor en ferreterías y tlapalerías"
+    },
+    {
+      "code": "467112",
+      "name": "Comercio al por menor de pisos y recubrimientos cerámicos"
+    },
+    {
+      "code": "467113",
+      "name": "Comercio al por menor de pintura"
+    },
+    {
+      "code": "467114",
+      "name": "Comercio al por menor de vidrios y espejos"
+    },
+    {
+      "code": "467115",
+      "name": "Comercio al por menor de artículos para la limpieza"
+    },
+    {
+      "code": "467116",
+      "name": "Comercio al por menor de materiales para la construcción en tiendas de autoservicio especializadas"
+    },
+    {
+      "code": "467117",
+      "name": "Comercio al por menor de artículos para albercas y otros artículos"
+    },
+    {
+      "code": "468111",
+      "name": "Comercio al por menor de automóviles y camionetas nuevos"
+    },
+    {
+      "code": "468112",
+      "name": "Comercio al por menor de automóviles y camionetas usados"
+    },
+    {
+      "code": "468211",
+      "name": "Comercio al por menor de partes y refacciones nuevas para automóviles, camionetas y camiones"
+    },
+    {
+      "code": "468212",
+      "name": "Comercio al por menor de partes y refacciones usadas para automóviles, camionetas y camiones"
+    },
+    {
+      "code": "468213",
+      "name": "Comercio al por menor de llantas y cámaras para automóviles, camionetas y camiones"
+    },
+    {
+      "code": "468311",
+      "name": "Comercio al por menor de motocicletas"
+    },
+    {
+      "code": "468319",
+      "name": "Comercio al por menor de otros vehículos de motor"
+    },
+    {
+      "code": "468411",
+      "name": "Comercio al por menor de gasolina y diésel"
+    },
+    {
+      "code": "468412",
+      "name": "Comercio al por menor de gas LP en cilindros y para tanques estacionarios"
+    },
+    {
+      "code": "468413",
+      "name": "Comercio al por menor de gas LP en estaciones de carburación"
+    },
+    {
+      "code": "468414",
+      "name": "Comercio al por menor en estaciones de gas natural vehicular"
+    },
+    {
+      "code": "468419",
+      "name": "Comercio al por menor de otros combustibles"
+    },
+    {
+      "code": "468420",
+      "name": "Comercio al por menor de aceites y grasas lubricantes, aditivos y similares para vehículos de motor"
+    },
+    {
+      "code": "469110",
+      "name": "Intermediación de comercio al por menor, y comercio al por menor a través de catálogos impresos, televisión y similares"
+    },
+    {
+      "code": "481111",
+      "name": "Transporte aéreo regular en líneas aéreas nacionales"
+    },
+    {
+      "code": "481112",
+      "name": "Transporte aéreo regular en líneas aéreas extranjeras"
+    },
+    {
+      "code": "481210",
+      "name": "Transporte aéreo no regular"
+    },
+    {
+      "code": "482110",
+      "name": "Transporte por ferrocarril"
+    },
+    {
+      "code": "483111",
+      "name": "Transporte marítimo de altura, excepto de petróleo y gas natural"
+    },
+    {
+      "code": "483112",
+      "name": "Transporte marítimo de cabotaje, excepto de petróleo y gas natural"
+    },
+    {
+      "code": "483113",
+      "name": "Transporte marítimo de petróleo y gas natural"
+    },
+    {
+      "code": "483210",
+      "name": "Transporte por aguas interiores"
+    },
+    {
+      "code": "484111",
+      "name": "Autotransporte local de productos agrícolas sin refrigeración"
+    },
+    {
+      "code": "484119",
+      "name": "Otro autotransporte local de carga general"
+    },
+    {
+      "code": "484121",
+      "name": "Autotransporte foráneo de productos agrícolas sin refrigeración"
+    },
+    {
+      "code": "484129",
+      "name": "Otro autotransporte foráneo de carga general"
+    },
+    {
+      "code": "484210",
+      "name": "Servicios de mudanzas"
+    },
+    {
+      "code": "484221",
+      "name": "Autotransporte local de materiales para la construcción"
+    },
+    {
+      "code": "484222",
+      "name": "Autotransporte local de materiales y residuos peligrosos"
+    },
+    {
+      "code": "484223",
+      "name": "Autotransporte local con refrigeración"
+    },
+    {
+      "code": "484224",
+      "name": "Autotransporte local de madera"
+    },
+    {
+      "code": "484229",
+      "name": "Otro autotransporte local de carga especializado"
+    },
+    {
+      "code": "484231",
+      "name": "Autotransporte foráneo de materiales para la construcción"
+    },
+    {
+      "code": "484232",
+      "name": "Autotransporte foráneo de materiales y residuos peligrosos"
+    },
+    {
+      "code": "484233",
+      "name": "Autotransporte foráneo con refrigeración"
+    },
+    {
+      "code": "484234",
+      "name": "Autotransporte foráneo de madera"
+    },
+    {
+      "code": "484239",
+      "name": "Otro autotransporte foráneo de carga especializado"
+    },
+    {
+      "code": "485111",
+      "name": "Transporte colectivo urbano y suburbano de pasajeros en autobuses de ruta fija"
+    },
+    {
+      "code": "485112",
+      "name": "Transporte colectivo urbano y suburbano de pasajeros en automóviles de ruta fija"
+    },
+    {
+      "code": "485113",
+      "name": "Transporte colectivo urbano y suburbano de pasajeros en trolebuses y trenes ligeros"
+    },
+    {
+      "code": "485114",
+      "name": "Transporte colectivo urbano y suburbano de pasajeros en metro"
+    },
+    {
+      "code": "485115",
+      "name": "Transporte colectivo urbano y suburbano de pasajeros en autobuses que transitan en carril exclusivo"
+    },
+    {
+      "code": "485210",
+      "name": "Transporte colectivo foráneo de pasajeros de ruta fija"
+    },
+    {
+      "code": "485311",
+      "name": "Transporte de pasajeros en taxis de sitio"
+    },
+    {
+      "code": "485312",
+      "name": "Transporte de pasajeros en taxis de ruleteo"
+    },
+    {
+      "code": "485320",
+      "name": "Alquiler de automóviles con chofer"
+    },
+    {
+      "code": "485410",
+      "name": "Transporte escolar y de personal"
+    },
+    {
+      "code": "485510",
+      "name": "Alquiler de autobuses con chofer"
+    },
+    {
+      "code": "485990",
+      "name": "Otro transporte terrestre de pasajeros"
+    },
+    {
+      "code": "486110",
+      "name": "Transporte de petróleo crudo por ductos"
+    },
+    {
+      "code": "486210",
+      "name": "Transporte de gas natural por ductos"
+    },
+    {
+      "code": "486910",
+      "name": "Transporte por ductos de productos refinados del petróleo"
+    },
+    {
+      "code": "486990",
+      "name": "Transporte por ductos de otros productos, excepto de productos refinados del petróleo"
+    },
+    {
+      "code": "487110",
+      "name": "Transporte turístico por tierra"
+    },
+    {
+      "code": "487210",
+      "name": "Transporte turístico por agua"
+    },
+    {
+      "code": "487990",
+      "name": "Otro transporte turístico"
+    },
+    {
+      "code": "488111",
+      "name": "Servicios a la navegación aérea"
+    },
+    {
+      "code": "488112",
+      "name": "Administración de aeropuertos y helipuertos"
+    },
+    {
+      "code": "488190",
+      "name": "Otros servicios relacionados con el transporte aéreo"
+    },
+    {
+      "code": "488210",
+      "name": "Servicios relacionados con el transporte por ferrocarril"
+    },
+    {
+      "code": "488310",
+      "name": "Administración de puertos y muelles"
+    },
+    {
+      "code": "488320",
+      "name": "Servicios de carga y descarga para el transporte por agua"
+    },
+    {
+      "code": "488330",
+      "name": "Servicios para la navegación por agua"
+    },
+    {
+      "code": "488390",
+      "name": "Otros servicios relacionados con el transporte por agua"
+    },
+    {
+      "code": "488410",
+      "name": "Servicios de grúa"
+    },
+    {
+      "code": "488491",
+      "name": "Servicios de administración de centrales camioneras"
+    },
+    {
+      "code": "488492",
+      "name": "Servicios de administración de carreteras, puentes y servicios auxiliares"
+    },
+    {
+      "code": "488493",
+      "name": "Servicios de báscula para el transporte y otros servicios relacionados con el transporte por carretera"
+    },
+    {
+      "code": "488511",
+      "name": "Servicios de agencias aduanales"
+    },
+    {
+      "code": "488519",
+      "name": "Otros servicios de intermediación para el transporte de carga"
+    },
+    {
+      "code": "488990",
+      "name": "Otros servicios relacionados con el transporte"
+    },
+    {
+      "code": "491110",
+      "name": "Servicios postales"
+    },
+    {
+      "code": "492110",
+      "name": "Servicios de mensajería y paquetería foránea"
+    },
+    {
+      "code": "492210",
+      "name": "Servicios de mensajería y paquetería local"
+    },
+    {
+      "code": "493111",
+      "name": "Almacenes generales de depósito"
+    },
+    {
+      "code": "493119",
+      "name": "Otros servicios de almacenamiento general sin instalaciones especializadas"
+    },
+    {
+      "code": "493120",
+      "name": "Almacenamiento con refrigeración"
+    },
+    {
+      "code": "493130",
+      "name": "Almacenamiento de productos agrícolas que no requieren refrigeración"
+    },
+    {
+      "code": "493190",
+      "name": "Otros servicios de almacenamiento con instalaciones especializadas"
+    },
+    {
+      "code": "512111",
+      "name": "Producción de películas"
+    },
+    {
+      "code": "512112",
+      "name": "Producción de programas para la televisión"
+    },
+    {
+      "code": "512113",
+      "name": "Producción de videoclips, comerciales y otros materiales audiovisuales"
+    },
+    {
+      "code": "512120",
+      "name": "Distribución de películas y de otros materiales audiovisuales"
+    },
+    {
+      "code": "512130",
+      "name": "Exhibición de películas y otros materiales audiovisuales"
+    },
+    {
+      "code": "512190",
+      "name": "Servicios de postproducción y otros servicios para la industria fílmica y del video"
+    },
+    {
+      "code": "512230",
+      "name": "Editoras de música"
+    },
+    {
+      "code": "512240",
+      "name": "Grabación de discos compactos (CD) y de video digital (DVD) o casetes musicales"
+    },
+    {
+      "code": "512250",
+      "name": "Productoras y distribuidoras discográficas"
+    },
+    {
+      "code": "512290",
+      "name": "Otros servicios de grabación del sonido"
+    },
+    {
+      "code": "513111",
+      "name": "Edición de periódicos en formato electrónico"
+    },
+    {
+      "code": "513112",
+      "name": "Edición de periódicos integrada con la impresión"
+    },
+    {
+      "code": "513121",
+      "name": "Edición de revistas y otras publicaciones periódicas en formato electrónico"
+    },
+    {
+      "code": "513122",
+      "name": "Edición de revistas y otras publicaciones periódicas integrada con la impresión"
+    },
+    {
+      "code": "513131",
+      "name": "Edición de libros en formato electrónico"
+    },
+    {
+      "code": "513132",
+      "name": "Edición de libros integrada con la impresión"
+    },
+    {
+      "code": "513141",
+      "name": "Edición de directorios y listas de correo en formato electrónico"
+    },
+    {
+      "code": "513142",
+      "name": "Edición de directorios y listas de correo integrada con la impresión"
+    },
+    {
+      "code": "513191",
+      "name": "Edición de otros materiales en formato electrónico"
+    },
+    {
+      "code": "513192",
+      "name": "Edición de otros materiales integrada con la impresión"
+    },
+    {
+      "code": "513210",
+      "name": "Edición de software"
+    },
+    {
+      "code": "516110",
+      "name": "Estaciones de transmisión de programas de radio"
+    },
+    {
+      "code": "516120",
+      "name": "Estaciones de transmisión de programas de televisión"
+    },
+    {
+      "code": "516210",
+      "name": "Servicios de distribución de audio y video en tiempo real (streaming), redes sociales, cadenas de radio y televisión y otros proveedores de contenido"
+    },
+    {
+      "code": "517311",
+      "name": "Operadores de servicios de telecomunicaciones alámbricas"
+    },
+    {
+      "code": "517312",
+      "name": "Operadores de servicios de telecomunicaciones inalámbricas"
+    },
+    {
+      "code": "517410",
+      "name": "Operadores de servicios de telecomunicaciones vía satélite"
+    },
+    {
+      "code": "517910",
+      "name": "Otros servicios de telecomunicaciones"
+    },
+    {
+      "code": "518210",
+      "name": "Provisión de infraestructura de servicios de cómputo, procesamiento de datos, hospedaje de páginas de internet y otros servicios relacionados"
+    },
+    {
+      "code": "519211",
+      "name": "Bibliotecas y archivos del sector privado"
+    },
+    {
+      "code": "519212",
+      "name": "Bibliotecas y archivos del sector público"
+    },
+    {
+      "code": "519290",
+      "name": "Portales de búsqueda en la red y otros servicios de suministro de información"
+    },
+    {
+      "code": "521110",
+      "name": "Banca central"
+    },
+    {
+      "code": "522110",
+      "name": "Banca múltiple"
+    },
+    {
+      "code": "522210",
+      "name": "Banca de desarrollo"
+    },
+    {
+      "code": "522220",
+      "name": "Fondos y fideicomisos financieros"
+    },
+    {
+      "code": "522310",
+      "name": "Uniones de crédito"
+    },
+    {
+      "code": "522320",
+      "name": "Cajas, cooperativas y sociedades financieras de ahorro y préstamo popular"
+    },
+    {
+      "code": "522390",
+      "name": "Otras instituciones de ahorro y préstamo"
+    },
+    {
+      "code": "522440",
+      "name": "Compañías de autofinanciamiento"
+    },
+    {
+      "code": "522451",
+      "name": "Montepíos"
+    },
+    {
+      "code": "522452",
+      "name": "Casas de empeño"
+    },
+    {
+      "code": "522460",
+      "name": "Sociedades financieras de objeto múltiple"
+    },
+    {
+      "code": "522490",
+      "name": "Otras instituciones de intermediación crediticia y financiera no bursátil"
+    },
+    {
+      "code": "522510",
+      "name": "Servicios relacionados con la intermediación crediticia no bursátil"
+    },
+    {
+      "code": "523110",
+      "name": "Casas de bolsa"
+    },
+    {
+      "code": "523121",
+      "name": "Casas de cambio"
+    },
+    {
+      "code": "523122",
+      "name": "Centros cambiarios"
+    },
+    {
+      "code": "523210",
+      "name": "Bolsa de valores"
+    },
+    {
+      "code": "523910",
+      "name": "Asesoría en inversiones"
+    },
+    {
+      "code": "523990",
+      "name": "Otros servicios relacionados con la intermediación bursátil"
+    },
+    {
+      "code": "524110",
+      "name": "Compañías de seguros"
+    },
+    {
+      "code": "524120",
+      "name": "Fondos de aseguramiento campesino"
+    },
+    {
+      "code": "524130",
+      "name": "Compañías afianzadoras"
+    },
+    {
+      "code": "524210",
+      "name": "Agentes, ajustadores y gestores de seguros y fianzas"
+    },
+    {
+      "code": "524220",
+      "name": "Administración de fondos para el retiro"
+    },
+    {
+      "code": "525110",
+      "name": "Sociedades de inversión especializadas en fondos para el retiro"
+    },
+    {
+      "code": "525210",
+      "name": "Fondos de inversión"
+    },
+    {
+      "code": "531111",
+      "name": "Alquiler sin intermediación de viviendas amuebladas"
+    },
+    {
+      "code": "531112",
+      "name": "Alquiler sin intermediación de viviendas no amuebladas"
+    },
+    {
+      "code": "531113",
+      "name": "Alquiler sin intermediación de salones para fiestas y convenciones"
+    },
+    {
+      "code": "531114",
+      "name": "Alquiler sin intermediación de oficinas y locales comerciales"
+    },
+    {
+      "code": "531115",
+      "name": "Alquiler sin intermediación de teatros, estadios, auditorios y similares"
+    },
+    {
+      "code": "531116",
+      "name": "Alquiler sin intermediación de edificios industriales dentro de un parque industrial"
+    },
+    {
+      "code": "531119",
+      "name": "Alquiler sin intermediación de otros bienes raíces"
+    },
+    {
+      "code": "531210",
+      "name": "Inmobiliarias y corredores de bienes raíces"
+    },
+    {
+      "code": "531311",
+      "name": "Servicios de administración de bienes raíces"
+    },
+    {
+      "code": "531319",
+      "name": "Otros servicios relacionados con los servicios inmobiliarios"
+    },
+    {
+      "code": "532110",
+      "name": "Alquiler de automóviles sin chofer"
+    },
+    {
+      "code": "532121",
+      "name": "Alquiler de camiones de carga sin chofer"
+    },
+    {
+      "code": "532122",
+      "name": "Alquiler de autobuses, minibuses y remolques sin chofer"
+    },
+    {
+      "code": "532210",
+      "name": "Alquiler de aparatos eléctricos y electrónicos para el hogar y personales"
+    },
+    {
+      "code": "532281",
+      "name": "Alquiler de prendas de vestir"
+    },
+    {
+      "code": "532282",
+      "name": "Alquiler de mesas, sillas, vajillas y similares"
+    },
+    {
+      "code": "532289",
+      "name": "Alquiler de otros artículos para el hogar y personales"
+    },
+    {
+      "code": "532310",
+      "name": "Centros generales de alquiler"
+    },
+    {
+      "code": "532411",
+      "name": "Alquiler de maquinaria y equipo para construcción, minería y actividades forestales"
+    },
+    {
+      "code": "532412",
+      "name": "Alquiler de equipo de transporte, excepto terrestre"
+    },
+    {
+      "code": "532420",
+      "name": "Alquiler de equipo de cómputo y de otras máquinas y mobiliario de oficina"
+    },
+    {
+      "code": "532491",
+      "name": "Alquiler de maquinaria y equipo agropecuario, pesquero y para la industria manufacturera"
+    },
+    {
+      "code": "532492",
+      "name": "Alquiler de maquinaria y equipo para mover, levantar y acomodar materiales"
+    },
+    {
+      "code": "532493",
+      "name": "Alquiler de maquinaria y equipo comercial y de servicios"
+    },
+    {
+      "code": "533110",
+      "name": "Servicios de alquiler de marcas registradas, patentes y franquicias"
+    },
+    {
+      "code": "541110",
+      "name": "Bufetes jurídicos"
+    },
+    {
+      "code": "541120",
+      "name": "Notarías públicas"
+    },
+    {
+      "code": "541190",
+      "name": "Servicios de apoyo para efectuar trámites legales"
+    },
+    {
+      "code": "541211",
+      "name": "Servicios de contabilidad y auditoría"
+    },
+    {
+      "code": "541219",
+      "name": "Otros servicios técnicos relacionados con la contabilidad"
+    },
+    {
+      "code": "541310",
+      "name": "Servicios de arquitectura"
+    },
+    {
+      "code": "541320",
+      "name": "Servicios de arquitectura de paisaje y urbanismo"
+    },
+    {
+      "code": "541330",
+      "name": "Servicios de ingeniería"
+    },
+    {
+      "code": "541340",
+      "name": "Servicios de dibujo"
+    },
+    {
+      "code": "541350",
+      "name": "Servicios de inspección de edificios"
+    },
+    {
+      "code": "541360",
+      "name": "Servicios de levantamiento geofísico"
+    },
+    {
+      "code": "541370",
+      "name": "Servicios de elaboración de mapas"
+    },
+    {
+      "code": "541380",
+      "name": "Servicios de laboratorios de pruebas"
+    },
+    {
+      "code": "541410",
+      "name": "Diseño y decoración de interiores"
+    },
+    {
+      "code": "541420",
+      "name": "Diseño industrial"
+    },
+    {
+      "code": "541430",
+      "name": "Diseño gráfico"
+    },
+    {
+      "code": "541490",
+      "name": "Diseño de modas y otros diseños especializados"
+    },
+    {
+      "code": "541510",
+      "name": "Servicios de diseño de sistemas de cómputo y servicios relacionados"
+    },
+    {
+      "code": "541610",
+      "name": "Servicios de consultoría en administración"
+    },
+    {
+      "code": "541620",
+      "name": "Servicios de consultoría en medio ambiente"
+    },
+    {
+      "code": "541690",
+      "name": "Otros servicios de consultoría científica y técnica"
+    },
+    {
+      "code": "541711",
+      "name": "Servicios de investigación científica y desarrollo en ciencias naturales y exactas, ingeniería, y ciencias de la vida, prestados por el sector privado"
+    },
+    {
+      "code": "541712",
+      "name": "Servicios de investigación científica y desarrollo en ciencias naturales y exactas, ingeniería, y ciencias de la vida, prestados por el sector público"
+    },
+    {
+      "code": "541721",
+      "name": "Servicios de investigación científica y desarrollo en ciencias sociales y humanidades, prestados por el sector privado"
+    },
+    {
+      "code": "541722",
+      "name": "Servicios de investigación científica y desarrollo en ciencias sociales y humanidades, prestados por el sector público"
+    },
+    {
+      "code": "541810",
+      "name": "Agencias de publicidad"
+    },
+    {
+      "code": "541820",
+      "name": "Agencias de relaciones públicas"
+    },
+    {
+      "code": "541830",
+      "name": "Agencias de compra de medios a petición del cliente"
+    },
+    {
+      "code": "541840",
+      "name": "Agencias de representación de medios"
+    },
+    {
+      "code": "541850",
+      "name": "Agencias de anuncios publicitarios"
+    },
+    {
+      "code": "541860",
+      "name": "Agencias de correo directo"
+    },
+    {
+      "code": "541870",
+      "name": "Distribución de material publicitario"
+    },
+    {
+      "code": "541890",
+      "name": "Servicios de rotulación y otros servicios de publicidad"
+    },
+    {
+      "code": "541910",
+      "name": "Servicios de investigación de mercados y encuestas de opinión pública"
+    },
+    {
+      "code": "541920",
+      "name": "Servicios de fotografía y videograbación"
+    },
+    {
+      "code": "541930",
+      "name": "Servicios de traducción e interpretación"
+    },
+    {
+      "code": "541941",
+      "name": "Servicios veterinarios para mascotas prestados por el sector privado"
+    },
+    {
+      "code": "541942",
+      "name": "Servicios veterinarios para mascotas prestados por el sector público"
+    },
+    {
+      "code": "541943",
+      "name": "Servicios veterinarios para la ganadería prestados por el sector privado"
+    },
+    {
+      "code": "541944",
+      "name": "Servicios veterinarios para la ganadería prestados por el sector público"
+    },
+    {
+      "code": "541990",
+      "name": "Otros servicios profesionales, científicos y técnicos"
+    },
+    {
+      "code": "551111",
+      "name": "Dirección y administración de grupos empresariales o corporativos"
+    },
+    {
+      "code": "551112",
+      "name": "Tenedoras de acciones"
+    },
+    {
+      "code": "561110",
+      "name": "Servicios de administración de negocios"
+    },
+    {
+      "code": "561210",
+      "name": "Servicios integrales de apoyo a los negocios en instalaciones"
+    },
+    {
+      "code": "561310",
+      "name": "Agencias de colocación"
+    },
+    {
+      "code": "561320",
+      "name": "Agencias de empleo temporal"
+    },
+    {
+      "code": "561330",
+      "name": "Suministro de personal permanente"
+    },
+    {
+      "code": "561410",
+      "name": "Servicios de preparación de documentos"
+    },
+    {
+      "code": "561421",
+      "name": "Servicios de casetas telefónicas"
+    },
+    {
+      "code": "561422",
+      "name": "Servicios de recepción de llamadas telefónicas y promoción por teléfono"
+    },
+    {
+      "code": "561431",
+      "name": "Servicios de fotocopiado, fax y afines"
+    },
+    {
+      "code": "561432",
+      "name": "Servicios de acceso a computadoras"
+    },
+    {
+      "code": "561440",
+      "name": "Agencias de cobranza"
+    },
+    {
+      "code": "561450",
+      "name": "Despachos de investigación de solvencia financiera"
+    },
+    {
+      "code": "561490",
+      "name": "Otros servicios de apoyo secretarial y similares"
+    },
+    {
+      "code": "561510",
+      "name": "Agencias de viajes"
+    },
+    {
+      "code": "561520",
+      "name": "Organización de excursiones y paquetes turísticos para agencias de viajes (Operadores de tours)"
+    },
+    {
+      "code": "561590",
+      "name": "Otros servicios de reservaciones"
+    },
+    {
+      "code": "561610",
+      "name": "Servicios de investigación y de protección y custodia, excepto mediante monitoreo"
+    },
+    {
+      "code": "561620",
+      "name": "Servicios de protección y custodia mediante el monitoreo de sistemas de seguridad"
+    },
+    {
+      "code": "561710",
+      "name": "Servicios de control y exterminación de plagas"
+    },
+    {
+      "code": "561720",
+      "name": "Servicios de limpieza de inmuebles"
+    },
+    {
+      "code": "561730",
+      "name": "Servicios de instalación y mantenimiento de áreas verdes"
+    },
+    {
+      "code": "561740",
+      "name": "Servicios de limpieza de tapicería, alfombras y muebles"
+    },
+    {
+      "code": "561790",
+      "name": "Otros servicios de limpieza"
+    },
+    {
+      "code": "561910",
+      "name": "Servicios de empacado y etiquetado"
+    },
+    {
+      "code": "561920",
+      "name": "Organizadores de convenciones y ferias comerciales e industriales"
+    },
+    {
+      "code": "561990",
+      "name": "Otros servicios de apoyo a los negocios"
+    },
+    {
+      "code": "562111",
+      "name": "Recolección de residuos peligrosos por el sector privado"
+    },
+    {
+      "code": "562112",
+      "name": "Recolección de residuos peligrosos por el sector público"
+    },
+    {
+      "code": "562121",
+      "name": "Recolección de residuos no peligrosos por el sector privado"
+    },
+    {
+      "code": "562122",
+      "name": "Recolección de residuos no peligrosos por el sector público"
+    },
+    {
+      "code": "562211",
+      "name": "Tratamiento y disposición final de residuos peligrosos por el sector privado"
+    },
+    {
+      "code": "562212",
+      "name": "Tratamiento y disposición final de residuos peligrosos por el sector público"
+    },
+    {
+      "code": "562221",
+      "name": "Tratamiento y disposición final de residuos no peligrosos por el sector privado"
+    },
+    {
+      "code": "562222",
+      "name": "Tratamiento y disposición final de residuos no peligrosos por el sector público"
+    },
+    {
+      "code": "562911",
+      "name": "Servicios de remediación por el sector privado"
+    },
+    {
+      "code": "562912",
+      "name": "Servicios de remediación por el sector público"
+    },
+    {
+      "code": "562921",
+      "name": "Recuperación de residuos por el sector privado"
+    },
+    {
+      "code": "562922",
+      "name": "Recuperación de residuos por el sector público"
+    },
+    {
+      "code": "562998",
+      "name": "Otros servicios de manejo de residuos por el sector privado"
+    },
+    {
+      "code": "562999",
+      "name": "Otros servicios de manejo de residuos por el sector público"
+    },
+    {
+      "code": "611111",
+      "name": "Escuelas de educación preescolar y centros de estimulación temprana del sector privado"
+    },
+    {
+      "code": "611112",
+      "name": "Escuelas de educación preescolar y centros de estimulación temprana del sector público"
+    },
+    {
+      "code": "611121",
+      "name": "Escuelas de educación primaria del sector privado"
+    },
+    {
+      "code": "611122",
+      "name": "Escuelas de educación primaria del sector público"
+    },
+    {
+      "code": "611131",
+      "name": "Escuelas de educación secundaria general del sector privado"
+    },
+    {
+      "code": "611132",
+      "name": "Escuelas de educación secundaria general del sector público"
+    },
+    {
+      "code": "611141",
+      "name": "Escuelas de educación secundaria técnica del sector privado"
+    },
+    {
+      "code": "611142",
+      "name": "Escuelas de educación secundaria técnica del sector público"
+    },
+    {
+      "code": "611151",
+      "name": "Escuelas de educación media técnica terminal del sector privado"
+    },
+    {
+      "code": "611152",
+      "name": "Escuelas de educación media técnica terminal del sector público"
+    },
+    {
+      "code": "611161",
+      "name": "Escuelas de educación media superior del sector privado"
+    },
+    {
+      "code": "611162",
+      "name": "Escuelas de educación media superior del sector público"
+    },
+    {
+      "code": "611171",
+      "name": "Escuelas del sector privado que combinan diversos niveles de educación"
+    },
+    {
+      "code": "611172",
+      "name": "Escuelas del sector público que combinan diversos niveles de educación"
+    },
+    {
+      "code": "611181",
+      "name": "Escuelas del sector privado de educación para necesidades especiales"
+    },
+    {
+      "code": "611182",
+      "name": "Escuelas del sector público de educación para necesidades especiales"
+    },
+    {
+      "code": "611211",
+      "name": "Escuelas de educación técnica superior del sector privado"
+    },
+    {
+      "code": "611212",
+      "name": "Escuelas de educación técnica superior del sector público"
+    },
+    {
+      "code": "611311",
+      "name": "Escuelas de educación superior del sector privado"
+    },
+    {
+      "code": "611312",
+      "name": "Escuelas de educación superior del sector público"
+    },
+    {
+      "code": "611411",
+      "name": "Escuelas comerciales y secretariales del sector privado"
+    },
+    {
+      "code": "611412",
+      "name": "Escuelas comerciales y secretariales del sector público"
+    },
+    {
+      "code": "611421",
+      "name": "Escuelas de computación del sector privado"
+    },
+    {
+      "code": "611422",
+      "name": "Escuelas de computación del sector público"
+    },
+    {
+      "code": "611431",
+      "name": "Escuelas para la capacitación de ejecutivos del sector privado"
+    },
+    {
+      "code": "611432",
+      "name": "Escuelas para la capacitación de ejecutivos del sector público"
+    },
+    {
+      "code": "611511",
+      "name": "Escuelas del sector privado dedicadas a la enseñanza de oficios"
+    },
+    {
+      "code": "611512",
+      "name": "Escuelas del sector público dedicadas a la enseñanza de oficios"
+    },
+    {
+      "code": "611611",
+      "name": "Escuelas de arte del sector privado"
+    },
+    {
+      "code": "611612",
+      "name": "Escuelas de arte del sector público"
+    },
+    {
+      "code": "611621",
+      "name": "Escuelas de deporte del sector privado"
+    },
+    {
+      "code": "611622",
+      "name": "Escuelas de deporte del sector público"
+    },
+    {
+      "code": "611631",
+      "name": "Escuelas de idiomas del sector privado"
+    },
+    {
+      "code": "611632",
+      "name": "Escuelas de idiomas del sector público"
+    },
+    {
+      "code": "611691",
+      "name": "Servicios de profesores particulares"
+    },
+    {
+      "code": "611698",
+      "name": "Otros servicios educativos proporcionados por el sector privado"
+    },
+    {
+      "code": "611699",
+      "name": "Otros servicios educativos proporcionados por el sector público"
+    },
+    {
+      "code": "611710",
+      "name": "Servicios de apoyo a la educación"
+    },
+    {
+      "code": "621111",
+      "name": "Consultorios de medicina general del sector privado"
+    },
+    {
+      "code": "621112",
+      "name": "Consultorios de medicina general del sector público"
+    },
+    {
+      "code": "621113",
+      "name": "Consultorios de medicina especializada del sector privado"
+    },
+    {
+      "code": "621114",
+      "name": "Consultorios de medicina especializada del sector público"
+    },
+    {
+      "code": "621115",
+      "name": "Clínicas de consultorios médicos del sector privado"
+    },
+    {
+      "code": "621116",
+      "name": "Clínicas de consultorios médicos del sector público"
+    },
+    {
+      "code": "621211",
+      "name": "Consultorios dentales del sector privado"
+    },
+    {
+      "code": "621212",
+      "name": "Consultorios dentales del sector público"
+    },
+    {
+      "code": "621311",
+      "name": "Consultorios de quiropráctica del sector privado"
+    },
+    {
+      "code": "621312",
+      "name": "Consultorios de quiropráctica del sector público"
+    },
+    {
+      "code": "621320",
+      "name": "Consultorios de optometría"
+    },
+    {
+      "code": "621331",
+      "name": "Consultorios de psicología del sector privado"
+    },
+    {
+      "code": "621332",
+      "name": "Consultorios de psicología del sector público"
+    },
+    {
+      "code": "621341",
+      "name": "Consultorios del sector privado de audiología y de terapia ocupacional, física y del lenguaje"
+    },
+    {
+      "code": "621342",
+      "name": "Consultorios del sector público de audiología y de terapia ocupacional, física y del lenguaje"
+    },
+    {
+      "code": "621391",
+      "name": "Consultorios de nutriólogos y dietistas del sector privado"
+    },
+    {
+      "code": "621392",
+      "name": "Consultorios de nutriólogos y dietistas del sector público"
+    },
+    {
+      "code": "621398",
+      "name": "Otros consultorios del sector privado para el cuidado de la salud"
+    },
+    {
+      "code": "621399",
+      "name": "Otros consultorios del sector público para el cuidado de la salud"
+    },
+    {
+      "code": "621411",
+      "name": "Centros de planificación familiar del sector privado"
+    },
+    {
+      "code": "621412",
+      "name": "Centros de planificación familiar del sector público"
+    },
+    {
+      "code": "621421",
+      "name": "Centros del sector privado de atención médica externa para enfermos mentales y adictos"
+    },
+    {
+      "code": "621422",
+      "name": "Centros del sector público de atención médica externa para enfermos mentales y adictos"
+    },
+    {
+      "code": "621491",
+      "name": "Otros centros del sector privado para la atención de pacientes que no requieren hospitalización"
+    },
+    {
+      "code": "621492",
+      "name": "Otros centros del sector público para la atención de pacientes que no requieren hospitalización"
+    },
+    {
+      "code": "621511",
+      "name": "Laboratorios médicos y de diagnóstico del sector privado"
+    },
+    {
+      "code": "621512",
+      "name": "Laboratorios médicos y de diagnóstico del sector público"
+    },
+    {
+      "code": "621610",
+      "name": "Servicios de enfermería a domicilio"
+    },
+    {
+      "code": "621910",
+      "name": "Servicios de ambulancias"
+    },
+    {
+      "code": "621991",
+      "name": "Servicios de bancos de órganos, bancos de sangre y otros servicios auxiliares al tratamiento médico prestados por el sector privado"
+    },
+    {
+      "code": "621992",
+      "name": "Servicios de bancos de órganos, bancos de sangre y otros servicios auxiliares al tratamiento médico prestados por el sector público"
+    },
+    {
+      "code": "622111",
+      "name": "Hospitales generales del sector privado"
+    },
+    {
+      "code": "622112",
+      "name": "Hospitales generales del sector público"
+    },
+    {
+      "code": "622211",
+      "name": "Hospitales psiquiátricos y para el tratamiento por adicción del sector privado"
+    },
+    {
+      "code": "622212",
+      "name": "Hospitales psiquiátricos y para el tratamiento por adicción del sector público"
+    },
+    {
+      "code": "622311",
+      "name": "Hospitales del sector privado de otras especialidades médicas"
+    },
+    {
+      "code": "622312",
+      "name": "Hospitales del sector público de otras especialidades médicas"
+    },
+    {
+      "code": "623111",
+      "name": "Residencias del sector privado con cuidados de enfermeras para enfermos convalecientes, en rehabilitación, incurables y terminales"
+    },
+    {
+      "code": "623112",
+      "name": "Residencias del sector público con cuidados de enfermeras para enfermos convalecientes, en rehabilitación, incurables y terminales"
+    },
+    {
+      "code": "623211",
+      "name": "Residencias del sector privado para el cuidado de personas con problemas de retardo mental"
+    },
+    {
+      "code": "623212",
+      "name": "Residencias del sector público para el cuidado de personas con problemas de retardo mental"
+    },
+    {
+      "code": "623221",
+      "name": "Residencias del sector privado para el cuidado de personas con problemas de trastorno mental y adicción"
+    },
+    {
+      "code": "623222",
+      "name": "Residencias del sector público para el cuidado de personas con problemas de trastorno mental y adicción"
+    },
+    {
+      "code": "623311",
+      "name": "Asilos y otras residencias del sector privado para el cuidado de ancianos"
+    },
+    {
+      "code": "623312",
+      "name": "Asilos y otras residencias del sector público para el cuidado de ancianos"
+    },
+    {
+      "code": "623991",
+      "name": "Orfanatos y otras residencias de asistencia social del sector privado"
+    },
+    {
+      "code": "623992",
+      "name": "Orfanatos y otras residencias de asistencia social del sector público"
+    },
+    {
+      "code": "624111",
+      "name": "Servicios de orientación y trabajo social para la niñez y la juventud prestados por el sector privado"
+    },
+    {
+      "code": "624112",
+      "name": "Servicios de orientación y trabajo social para la niñez y la juventud prestados por el sector público"
+    },
+    {
+      "code": "624121",
+      "name": "Centros del sector privado dedicados a la atención y cuidado diurno de ancianos y personas con discapacidad"
+    },
+    {
+      "code": "624122",
+      "name": "Centros del sector público dedicados a la atención y cuidado diurno de ancianos y personas con discapacidad"
+    },
+    {
+      "code": "624191",
+      "name": "Agrupaciones de autoayuda para alcohólicos y personas con otras adicciones"
+    },
+    {
+      "code": "624198",
+      "name": "Otros servicios de orientación y trabajo social prestados por el sector privado"
+    },
+    {
+      "code": "624199",
+      "name": "Otros servicios de orientación y trabajo social prestados por el sector público"
+    },
+    {
+      "code": "624211",
+      "name": "Servicios de alimentación comunitarios prestados por el sector privado"
+    },
+    {
+      "code": "624212",
+      "name": "Servicios de alimentación comunitarios prestados por el sector público"
+    },
+    {
+      "code": "624221",
+      "name": "Refugios temporales comunitarios del sector privado"
+    },
+    {
+      "code": "624222",
+      "name": "Refugios temporales comunitarios del sector público"
+    },
+    {
+      "code": "624231",
+      "name": "Servicios de emergencia comunitarios prestados por el sector privado"
+    },
+    {
+      "code": "624232",
+      "name": "Servicios de emergencia comunitarios prestados por el sector público"
+    },
+    {
+      "code": "624311",
+      "name": "Servicios de capacitación para el trabajo prestados por el sector privado para personas desempleadas, subempleadas o con discapacidad"
+    },
+    {
+      "code": "624312",
+      "name": "Servicios de capacitación para el trabajo prestados por el sector público para personas desempleadas, subempleadas o con discapacidad"
+    },
+    {
+      "code": "624411",
+      "name": "Guarderías del sector privado"
+    },
+    {
+      "code": "624412",
+      "name": "Guarderías del sector público"
+    },
+    {
+      "code": "711111",
+      "name": "Compañías de teatro del sector privado"
+    },
+    {
+      "code": "711112",
+      "name": "Compañías de teatro del sector público"
+    },
+    {
+      "code": "711121",
+      "name": "Compañías de danza del sector privado"
+    },
+    {
+      "code": "711122",
+      "name": "Compañías de danza del sector público"
+    },
+    {
+      "code": "711131",
+      "name": "Cantantes y grupos musicales del sector privado"
+    },
+    {
+      "code": "711132",
+      "name": "Grupos musicales del sector público"
+    },
+    {
+      "code": "711191",
+      "name": "Otras compañías y grupos de espectáculos artísticos del sector privado"
+    },
+    {
+      "code": "711192",
+      "name": "Otras compañías y grupos de espectáculos artísticos del sector público"
+    },
+    {
+      "code": "711211",
+      "name": "Deportistas profesionales"
+    },
+    {
+      "code": "711212",
+      "name": "Equipos deportivos profesionales"
+    },
+    {
+      "code": "711311",
+      "name": "Promotores del sector privado de espectáculos artísticos, culturales, deportivos y similares que cuentan con instalaciones para presentarlos"
+    },
+    {
+      "code": "711312",
+      "name": "Promotores del sector público de espectáculos artísticos, culturales, deportivos y similares que cuentan con instalaciones para presentarlos"
+    },
+    {
+      "code": "711320",
+      "name": "Promotores de espectáculos artísticos, culturales, deportivos y similares que no cuentan con instalaciones para presentarlos"
+    },
+    {
+      "code": "711410",
+      "name": "Agentes y representantes de artistas, deportistas y similares"
+    },
+    {
+      "code": "711510",
+      "name": "Artistas, escritores y técnicos independientes"
+    },
+    {
+      "code": "712111",
+      "name": "Museos del sector privado"
+    },
+    {
+      "code": "712112",
+      "name": "Museos del sector público"
+    },
+    {
+      "code": "712120",
+      "name": "Sitios históricos"
+    },
+    {
+      "code": "712131",
+      "name": "Jardines botánicos y zoológicos del sector privado"
+    },
+    {
+      "code": "712132",
+      "name": "Jardines botánicos y zoológicos del sector público"
+    },
+    {
+      "code": "712190",
+      "name": "Grutas, parques naturales y otros sitios del patrimonio cultural de la nación"
+    },
+    {
+      "code": "713111",
+      "name": "Parques de diversiones y temáticos del sector privado"
+    },
+    {
+      "code": "713112",
+      "name": "Parques de diversiones y temáticos del sector público"
+    },
+    {
+      "code": "713113",
+      "name": "Parques acuáticos y balnearios del sector privado"
+    },
+    {
+      "code": "713114",
+      "name": "Parques acuáticos y balnearios del sector público"
+    },
+    {
+      "code": "713120",
+      "name": "Casas de juegos electrónicos"
+    },
+    {
+      "code": "713210",
+      "name": "Casinos"
+    },
+    {
+      "code": "713291",
+      "name": "Venta de billetes de lotería, pronósticos deportivos y otros boletos de sorteo"
+    },
+    {
+      "code": "713299",
+      "name": "Otros juegos de azar"
+    },
+    {
+      "code": "713910",
+      "name": "Campos de golf"
+    },
+    {
+      "code": "713920",
+      "name": "Pistas para esquiar"
+    },
+    {
+      "code": "713930",
+      "name": "Marinas turísticas"
+    },
+    {
+      "code": "713941",
+      "name": "Clubes deportivos del sector privado"
+    },
+    {
+      "code": "713942",
+      "name": "Clubes deportivos del sector público"
+    },
+    {
+      "code": "713943",
+      "name": "Centros de acondicionamiento físico del sector privado"
+    },
+    {
+      "code": "713944",
+      "name": "Centros de acondicionamiento físico del sector público"
+    },
+    {
+      "code": "713950",
+      "name": "Boliches"
+    },
+    {
+      "code": "713991",
+      "name": "Billares"
+    },
+    {
+      "code": "713992",
+      "name": "Clubes o ligas de aficionados"
+    },
+    {
+      "code": "713998",
+      "name": "Otros servicios recreativos prestados por el sector privado"
+    },
+    {
+      "code": "713999",
+      "name": "Otros servicios recreativos prestados por el sector público"
+    },
+    {
+      "code": "721111",
+      "name": "Hoteles con otros servicios integrados"
+    },
+    {
+      "code": "721112",
+      "name": "Hoteles sin otros servicios integrados"
+    },
+    {
+      "code": "721113",
+      "name": "Moteles"
+    },
+    {
+      "code": "721120",
+      "name": "Hoteles con casino"
+    },
+    {
+      "code": "721190",
+      "name": "Cabañas, villas y similares"
+    },
+    {
+      "code": "721210",
+      "name": "Campamentos y albergues recreativos"
+    },
+    {
+      "code": "721311",
+      "name": "Pensiones y casas de huéspedes"
+    },
+    {
+      "code": "721312",
+      "name": "Departamentos y casas amueblados con servicios de hotelería"
+    },
+    {
+      "code": "722310",
+      "name": "Servicios de comedor para empresas e instituciones"
+    },
+    {
+      "code": "722320",
+      "name": "Servicios de preparación de alimentos para ocasiones especiales"
+    },
+    {
+      "code": "722330",
+      "name": "Servicios de preparación de alimentos en unidades móviles"
+    },
+    {
+      "code": "722411",
+      "name": "Centros nocturnos, discotecas y similares"
+    },
+    {
+      "code": "722412",
+      "name": "Bares, cantinas y similares"
+    },
+    {
+      "code": "722511",
+      "name": "Restaurantes con servicio de preparación de alimentos a la carta o de comida corrida"
+    },
+    {
+      "code": "722512",
+      "name": "Restaurantes con servicio de preparación de pescados y mariscos"
+    },
+    {
+      "code": "722513",
+      "name": "Restaurantes con servicio de preparación de antojitos"
+    },
+    {
+      "code": "722514",
+      "name": "Restaurantes con servicio de preparación de tacos y tortas"
+    },
+    {
+      "code": "722515",
+      "name": "Cafeterías, fuentes de sodas, neverías, refresquerías y similares"
+    },
+    {
+      "code": "722516",
+      "name": "Restaurantes de autoservicio"
+    },
+    {
+      "code": "722517",
+      "name": "Restaurantes con servicio de preparación de pizzas, hamburguesas, hot dogs y pollos rostizados para llevar"
+    },
+    {
+      "code": "722518",
+      "name": "Restaurantes que preparan otro tipo de alimentos para llevar"
+    },
+    {
+      "code": "722519",
+      "name": "Servicios de preparación de otros alimentos para consumo inmediato"
+    },
+    {
+      "code": "811111",
+      "name": "Reparación mecánica en general de automóviles y camiones"
+    },
+    {
+      "code": "811112",
+      "name": "Reparación del sistema eléctrico y electrónico de automóviles y camiones"
+    },
+    {
+      "code": "811113",
+      "name": "Rectificación de partes de motor de automóviles y camiones"
+    },
+    {
+      "code": "811114",
+      "name": "Reparación de transmisiones de automóviles y camiones"
+    },
+    {
+      "code": "811115",
+      "name": "Reparación de suspensiones de automóviles y camiones"
+    },
+    {
+      "code": "811116",
+      "name": "Alineación y balanceo de automóviles y camiones"
+    },
+    {
+      "code": "811119",
+      "name": "Otras reparaciones mecánicas de automóviles y camiones"
+    },
+    {
+      "code": "811121",
+      "name": "Hojalatería y pintura de automóviles y camiones"
+    },
+    {
+      "code": "811122",
+      "name": "Tapicería de automóviles y camiones"
+    },
+    {
+      "code": "811123",
+      "name": "Servicios de blindaje y de adaptación de automóviles y camiones"
+    },
+    {
+      "code": "811129",
+      "name": "Instalación de cristales y otras reparaciones a la carrocería de automóviles y camiones"
+    },
+    {
+      "code": "811191",
+      "name": "Reparación menor de llantas"
+    },
+    {
+      "code": "811192",
+      "name": "Lavado y lubricado de automóviles y camiones"
+    },
+    {
+      "code": "811199",
+      "name": "Otros servicios de reparación y mantenimiento de automóviles y camiones"
+    },
+    {
+      "code": "811211",
+      "name": "Reparación y mantenimiento de equipo electrónico de uso doméstico"
+    },
+    {
+      "code": "811219",
+      "name": "Reparación y mantenimiento de otro equipo electrónico y de equipo de precisión"
+    },
+    {
+      "code": "811311",
+      "name": "Reparación y mantenimiento de maquinaria y equipo agropecuario y forestal"
+    },
+    {
+      "code": "811312",
+      "name": "Reparación y mantenimiento de maquinaria y equipo industrial"
+    },
+    {
+      "code": "811313",
+      "name": "Reparación y mantenimiento de maquinaria y equipo para mover, levantar y acomodar materiales"
+    },
+    {
+      "code": "811314",
+      "name": "Reparación y mantenimiento de maquinaria y equipo comercial y de servicios"
+    },
+    {
+      "code": "811410",
+      "name": "Reparación y mantenimiento de aparatos eléctricos para el hogar y personales"
+    },
+    {
+      "code": "811420",
+      "name": "Reparación de tapicería de muebles para el hogar"
+    },
+    {
+      "code": "811430",
+      "name": "Reparación de calzado y otros artículos de piel y cuero"
+    },
+    {
+      "code": "811491",
+      "name": "Cerrajerías"
+    },
+    {
+      "code": "811492",
+      "name": "Reparación y mantenimiento de motocicletas"
+    },
+    {
+      "code": "811493",
+      "name": "Reparación y mantenimiento de bicicletas"
+    },
+    {
+      "code": "811499",
+      "name": "Reparación y mantenimiento de otros artículos para el hogar y personales"
+    },
+    {
+      "code": "812110",
+      "name": "Salones y clínicas de belleza y peluquerías"
+    },
+    {
+      "code": "812120",
+      "name": "Baños públicos"
+    },
+    {
+      "code": "812130",
+      "name": "Sanitarios públicos y bolerías"
+    },
+    {
+      "code": "812210",
+      "name": "Lavanderías y tintorerías"
+    },
+    {
+      "code": "812310",
+      "name": "Servicios funerarios"
+    },
+    {
+      "code": "812321",
+      "name": "Administración de cementerios pertenecientes al sector privado"
+    },
+    {
+      "code": "812322",
+      "name": "Administración de cementerios pertenecientes al sector público"
+    },
+    {
+      "code": "812410",
+      "name": "Estacionamientos y pensiones para vehículos automotores"
+    },
+    {
+      "code": "812910",
+      "name": "Servicios de revelado e impresión de fotografías"
+    },
+    {
+      "code": "812990",
+      "name": "Otros servicios personales"
+    },
+    {
+      "code": "813110",
+      "name": "Asociaciones, organizaciones y cámaras de productores, comerciantes y prestadores de servicios"
+    },
+    {
+      "code": "813120",
+      "name": "Asociaciones y organizaciones laborales y sindicales"
+    },
+    {
+      "code": "813130",
+      "name": "Asociaciones y organizaciones de profesionistas"
+    },
+    {
+      "code": "813140",
+      "name": "Asociaciones regulatorias de actividades recreativas"
+    },
+    {
+      "code": "813210",
+      "name": "Asociaciones y organizaciones religiosas"
+    },
+    {
+      "code": "813220",
+      "name": "Asociaciones y organizaciones políticas"
+    },
+    {
+      "code": "813230",
+      "name": "Asociaciones y organizaciones civiles"
+    },
+    {
+      "code": "814110",
+      "name": "Hogares con empleados domésticos"
+    },
+    {
+      "code": "931110",
+      "name": "Órganos legislativos"
+    },
+    {
+      "code": "931210",
+      "name": "Administración pública en general"
+    },
+    {
+      "code": "931310",
+      "name": "Regulación y fomento del desarrollo económico"
+    },
+    {
+      "code": "931411",
+      "name": "Impartición de justicia"
+    },
+    {
+      "code": "931412",
+      "name": "Mantenimiento de la seguridad y el orden público"
+    },
+    {
+      "code": "931510",
+      "name": "Regulación y fomento de actividades para mejorar y preservar el medio ambiente"
+    },
+    {
+      "code": "931610",
+      "name": "Actividades administrativas de instituciones de bienestar social"
+    },
+    {
+      "code": "931710",
+      "name": "Relaciones exteriores"
+    },
+    {
+      "code": "931810",
+      "name": "Actividades de seguridad nacional"
+    },
+    {
+      "code": "932110",
+      "name": "Organismos internacionales"
+    },
+    {
+      "code": "932120",
+      "name": "Sedes diplomáticas y otras unidades extraterritoriales"
+    }
+  ]
+}

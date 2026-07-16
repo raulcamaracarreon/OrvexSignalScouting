@@ -755,3 +755,180 @@ td small {
         animation-iteration-count: 1 !important;
     }
 }
+
+.scian-search-field {
+    position: relative;
+}
+
+.scian-search-shell {
+    position: relative;
+}
+
+.scian-results {
+    position: absolute;
+    z-index: 30;
+    top: calc(100% + 8px);
+    right: 0;
+    left: 0;
+    max-height: 360px;
+    overflow-y: auto;
+    border: 1px solid rgba(0, 255, 255, 0.42);
+    border-radius: 12px;
+    background:
+        linear-gradient(
+            180deg,
+            rgb(31, 31, 31),
+            rgb(12, 12, 12)
+        );
+    box-shadow:
+        0 22px 55px rgba(0, 0, 0, 0.72),
+        0 0 25px rgba(0, 255, 255, 0.08);
+    scrollbar-color:
+        var(--color-purple)
+        var(--color-black);
+    scrollbar-width: thin;
+}
+
+.scian-results[hidden],
+.scian-selected[hidden] {
+    display: none;
+}
+
+.scian-result-option {
+    display: grid;
+    width: 100%;
+    gap: 5px;
+    padding: 14px 16px;
+    border: 0;
+    border-bottom: 1px solid rgb(55, 55, 55);
+    color: var(--color-text);
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+}
+
+.scian-result-option:last-child {
+    border-bottom: 0;
+}
+
+.scian-result-option:hover,
+.scian-result-option.is-active {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(160, 61, 160, 0.22),
+            rgba(0, 255, 255, 0.09)
+        );
+}
+
+.scian-result-option:focus-visible {
+    position: relative;
+    z-index: 1;
+    outline: 2px solid var(--color-cyan);
+    outline-offset: -2px;
+}
+
+.scian-result-code {
+    color: var(--color-cyan);
+    font-size: 0.76rem;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.scian-result-name {
+    color: var(--color-text);
+    font-size: 0.9rem;
+    font-weight: 750;
+    line-height: 1.45;
+}
+
+.scian-results-empty {
+    margin: 0;
+    padding: 17px;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
+
+.scian-selected {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 17px 18px;
+    border: 1px solid rgba(246, 186, 94, 0.44);
+    border-radius: 12px;
+    background:
+        linear-gradient(
+            110deg,
+            rgba(160, 61, 160, 0.16),
+            rgba(36, 36, 36, 0.96) 48%,
+            rgba(0, 255, 255, 0.07)
+        );
+}
+
+.scian-selected-copy {
+    display: grid;
+    gap: 5px;
+}
+
+.scian-selected-label {
+    color: var(--color-yellow);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.scian-selected-copy strong {
+    color: var(--color-text);
+    line-height: 1.45;
+}
+
+.scian-selected-code {
+    color: var(--color-cyan);
+    font-size: 0.82rem;
+    font-weight: 900;
+}
+
+.scian-clear-button {
+    flex: 0 0 auto;
+    min-height: 38px;
+    padding: 7px 13px;
+    border: 1px solid rgba(255, 115, 0, 0.65);
+    border-radius: 9px;
+    color: var(--color-yellow);
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 115, 0, 0.12),
+            rgba(0, 0, 0, 0.82)
+        );
+    font-size: 0.8rem;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.scian-clear-button:hover {
+    border-color: var(--color-cyan);
+    color: var(--color-cyan);
+}
+
+.scian-clear-button:focus-visible {
+    outline: 3px solid rgba(0, 255, 255, 0.34);
+    outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+    .scian-results {
+        max-height: 310px;
+    }
+
+    .scian-selected {
+        flex-direction: column;
+    }
+
+    .scian-clear-button {
+        width: 100%;
+    }
+}
