@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>OrvexSignal Scouting</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='styles.css') }}"
+    >
+</head>
+
+<body>
+    <header class="app-header">
+        <div class="container">
+            <p class="eyebrow">ORVEXSIGNAL</p>
+            <h1>Scouting de negocios</h1>
+
+            <p class="subtitle">
+                Localiza y filtra prospectos comerciales utilizando
+                información del DENUE.
+            </p>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <section class="card">
+            <h2>Buscar establecimientos</h2>
+
+            <p class="help-text">
+                Esta primera versión busca negocios dentro de un radio
+                geográfico. Posteriormente agregaremos selección por
+                estado, municipio y actividad SCIAN.
+            </p>
+
+            <form method="post" class="search-form">
+                <div class="field field-wide">
+                    <label for="condition">
+                        Actividad o palabra
+                    </label>
+
+                    <input
+                        id="condition"
+                        name="condition"
+                        type="text"
+                        value="{{ form_data.condition }}"
+                        placeholder="Ejemplo: llantas"
+                        required
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="latitude">
+                        Latitud
+                    </label>
+
+                    <input
+                        id="latitude"
+                        name="latitude"
+                        type="number"
+                        step="any"
+                        value="{{ form_data.latitude }}"
+                        required
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="longitude">
+                        Longitud
+                    </label>
+
+                    <input
+                        id="longitude"
+                        name="longitude"
+                        type="number"
+                        step="any"
+                        value="{{ form_data.longitude }}"
+                        required
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="distance">
+                        Radio en metros
+                    </label>
+
+                    <input
+                        id="distance"
+                        name="distance"
+                        type="number"
+                        min="1"
+                        max="5000"
+                        value="{{ form_data.distance }}"
+                        required
+                    >
+                </div>
+
+                <fieldset class="filters">
+                    <legend>Filtros comerciales</legend>
+
+                    <label class="checkbox-option">
+                        <input
+                            type="checkbox"
+                            name="only_with_phone"
+                            {% if form_data.only_with_phone %}checked{% endif %}
+                        >
+
+                        Mostrar solamente negocios con teléfono
+                    </label>
+
+                    <label class="checkbox-option">
+                        <input
+                            type="checkbox"
+                            name="only_without_website"
+                            {% if form_data.only_without_website %}checked{% endif %}
+                        >
+
+                        Mostrar solamente negocios sin sitio web registrado
+                    </label>
+                </fieldset>
+
+                <button type="submit" class="primary-button">
+                    Buscar prospectos
+                </button>
+            </form>
+        </section>
+
+        {% if error_message %}
+            <section class="alert alert-error">
+                <strong>No fue posible completar la consulta.</strong>
+                <p>{{ error_message }}</p>
+            </section>
+        {% endif %}
+
+        {% if search_executed and not error_message %}
+            <section class="results-summary">
+                <div>
+                    <span class="summary-number">
+                        {{ api_result_count }}
+                    </span>
+
+                    <span class="summary-label">
+                        resultados recibidos del DENUE
+                    </span>
+                </div>
+
+                <div>
+                    <span class="summary-number">
+                        {{ results|length }}
+                    </span>
+
+                    <span class="summary-label">
+                        prospectos después de aplicar filtros
+                    </span>
+                </div>
+            </section>
+
+            {% if results %}
+                <section class="card results-card">
+                    <div class="table-header">
+                        <div>
+                            <h2>Prospectos encontrados</h2>
+
+                            <p class="help-text">
+                                La ausencia de sitio web en DENUE debe
+                                verificarse posteriormente.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Negocio</th>
+                                    <th>Actividad</th>
+                                    <th>Estrato</th>
+                                    <th>Teléfono</th>
+                                    <th>Sitio web</th>
+                                    <th>Colonia</th>
+                                    <th>Ubicación</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {% for record in results %}
+                                    <tr>
+                                        <td>
+                                            <strong>
+                                                {{ record.get('Nombre', '') }}
+                                            </strong>
+
+                                            {% if record.get('Razon_social') %}
+                                                <small>
+                                                    {{ record.get('Razon_social') }}
+                                                </small>
+                                            {% endif %}
+                                        </td>
+
+                                        <td>
+                                            {{ record.get('Clase_actividad', '') }}
+                                        </td>
+
+                                        <td>
+                                            {{ record.get('Estrato', '') }}
+                                        </td>
+
+                                        <td>
+                                            {{ record.get('Telefono', '') }}
+                                        </td>
+
+                                        <td>
+                                            {% if record.get('Sitio_internet') %}
+                                                {{ record.get('Sitio_internet') }}
+                                            {% else %}
+                                                <span class="status-empty">
+                                                    Sin sitio registrado
+                                                </span>
+                                            {% endif %}
+                                        </td>
+
+                                        <td>
+                                            {{ record.get('Colonia', '') }}
+                                        </td>
+
+                                        <td>
+                                            {{ record.get('Ubicacion', '') }}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            {% else %}
+                <section class="alert">
+                    <strong>No quedaron prospectos con esos filtros.</strong>
+
+                    <p>
+                        Desmarca alguno de los filtros o prueba otra
+                        actividad o zona.
+                    </p>
+                </section>
+            {% endif %}
+        {% endif %}
+    </main>
+</body>
+</html>
