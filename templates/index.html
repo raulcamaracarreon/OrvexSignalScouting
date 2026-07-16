@@ -252,6 +252,7 @@
                                     <th>Sitio web</th>
                                     <th>Colonia</th>
                                     <th>Ubicación</th>
+                                    <th>Verificar</th>
                                 </tr>
                             </thead>
 
@@ -313,6 +314,28 @@
 
                                         <td>
                                             {{ record.get('Ubicacion', '') }}
+                                        </td>
+
+                                        <td>
+                                            {% if record.get('Google_Maps_URL') %}
+                                                <a
+                                                    class="map-link"
+                                                    href="{{
+                                                        record.get(
+                                                            'Google_Maps_URL',
+                                                            ''
+                                                        )
+                                                    }}"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    Abrir en Google Maps
+                                                </a>
+                                            {% else %}
+                                                <span class="status-empty">
+                                                    Sin ubicación
+                                                </span>
+                                            {% endif %}
                                         </td>
                                     </tr>
                                 {% endfor %}

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import os
 from pathlib import Path
+from urllib.parse import urlencode
 
 import requests
 from dotenv import load_dotenv
@@ -248,6 +249,49 @@ def normalize_text(value: object) -> str:
 
     return " ".join(str(value).split())
 
+def build_google_maps_url(
+    record: dict[str, object],
+) -> str:
+    query_parts = [
+        normalize_text(record.get("Nombre")),
+        normalize_text(record.get("Calle")),
+        normalize_text(record.get("Num_Exterior")),
+        normalize_text(record.get("Colonia")),
+        normalize_text(record.get("Ubicacion")),
+    ]
+
+    query = ", ".join(
+        part
+        for part in query_parts
+        if part
+    )
+
+    if not query:
+        latitude = normalize_text(
+            record.get("Latitud")
+        )
+
+        longitude = normalize_text(
+            record.get("Longitud")
+        )
+
+        if latitude and longitude:
+            query = f"{latitude},{longitude}"
+
+    if not query:
+        return ""
+
+    parameters = urlencode(
+        {
+            "api": "1",
+            "query": query,
+        }
+    )
+
+    return (
+        "https://www.google.com/maps/search/"
+        f"?{parameters}"
+    )
 
 def normalize_record(
     record: dict[str, object],
@@ -258,6 +302,12 @@ def normalize_record(
         normalized_record[field_name] = normalize_text(
             record.get(field_name)
         )
+
+    normalized_record["Google_Maps_URL"] = (
+        build_google_maps_url(
+            normalized_record
+        )
+    )
 
     return normalized_record
 
