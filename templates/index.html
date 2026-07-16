@@ -213,22 +213,32 @@
 
                 <div class="field">
                     <label for="maximum_records">
-                        Máximo de registros
+                        Cobertura de búsqueda
                     </label>
 
-                    <input
+                    <select
                         id="maximum_records"
                         name="maximum_records"
-                        type="number"
-                        min="1"
-                        max="500"
-                        value="{{ form_data.maximum_records }}"
                         required
                     >
+                        {% for option in coverage_options %}
+                            <option
+                                value="{{ option.value }}"
+                                {% if
+                                    form_data.maximum_records
+                                    == option.value
+                                %}
+                                    selected
+                                {% endif %}
+                            >
+                                {{ option.label }}
+                            </option>
+                        {% endfor %}
+                    </select>
 
                     <small class="field-hint">
-                        La aplicación permite consultar entre
-                        1 y 500 registros por búsqueda.
+                        La aplicación consulta bloques de hasta
+                        500 registros y los combina automáticamente.
                     </small>
                 </div>
 
@@ -310,7 +320,7 @@
                     </span>
 
                     <span class="summary-label">
-                        resultados recibidos del DENUE
+                        establecimientos examinados
                     </span>
                 </div>
 
@@ -323,7 +333,36 @@
                         prospectos después de aplicar filtros
                     </span>
                 </div>
+
+                <div>
+                    <span class="summary-number">
+                        {{ denue_batch_count }}
+                    </span>
+
+                    <span class="summary-label">
+                        {% if denue_batch_count == 1 %}
+                            bloque consultado al DENUE
+                        {% else %}
+                            bloques consultados al DENUE
+                        {% endif %}
+                    </span>
+                </div>
             </section>
+
+            {% if coverage_limit_reached %}
+                <section class="alert">
+                    <strong>
+                        Se alcanzó la cobertura seleccionada.
+                    </strong>
+
+                    <p>
+                        Podrían existir más establecimientos después
+                        de los {{ api_result_count }} examinados.
+                        Selecciona una cobertura mayor para ampliar
+                        la búsqueda.
+                    </p>
+                </section>
+            {% endif %}
 
             {% if results %}
                 <section class="card results-card">
@@ -336,8 +375,10 @@
                             </p>
 
                             <p class="help-text">
-                                La ausencia de sitio web en DENUE
-                                debe verificarse posteriormente.
+                                Los filtros y las exportaciones se
+                                aplican a todos los establecimientos
+                                examinados. La ausencia de sitio web
+                                en DENUE debe verificarse posteriormente.
                             </p>
                         </div>
                     </div>

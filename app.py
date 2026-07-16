@@ -22,6 +22,32 @@ DENUE_BASE_URL = (
     "https://www.inegi.org.mx/app/api/denue/v1/consulta"
 )
 
+DENUE_BATCH_SIZE = 500
+
+COVERAGE_OPTIONS = [
+    {
+        "value": "500",
+        "label": "Rápida — hasta 500 establecimientos",
+    },
+    {
+        "value": "1000",
+        "label": "Equilibrada — hasta 1,000 establecimientos",
+    },
+    {
+        "value": "2000",
+        "label": "Amplia — hasta 2,000 establecimientos",
+    },
+    {
+        "value": "5000",
+        "label": "Exhaustiva — hasta 5,000 establecimientos",
+    },
+]
+
+VALID_COVERAGE_LIMITS = {
+    int(option["value"])
+    for option in COVERAGE_OPTIONS
+}
+
 ENTITY_OPTIONS = [
     {
         "code": "09",
@@ -220,7 +246,7 @@ def get_default_form() -> dict[str, object]:
         "municipality": "007",
         "activity_class": "468213",
         "stratum": "0",
-        "maximum_records": "100",
+        "maximum_records": "1000",
         "only_with_phone": True,
         "only_without_website": True,
     }
@@ -246,12 +272,14 @@ def get_option_name(
     return selected_code
 
 
-def query_denue_area(
+def query_denue_range(
+    session: requests.Session,
     entity: str,
     municipality: str,
     activity_class: str,
     stratum: str,
-    maximum_records: int,
+    initial_record: int,
+    final_record: int,
 ) -> list[dict[str, object]]:
     token = os.getenv("DENUE_TOKEN", "").strip()
 
@@ -272,19 +300,19 @@ def query_denue_area(
         "0/"
         f"{activity_class}/"
         "0/"
-        "1/"
-        f"{maximum_records}/"
+        f"{initial_record}/"
+        f"{final_record}/"
         "0/"
         f"{stratum}/"
         f"{token}"
     )
 
-    response = requests.get(
+    response = session.get(
         request_url,
         timeout=30,
         headers={
             "Accept": "application/json",
-            "User-Agent": "OrvexSignalScouting/0.2",
+            "User-Agent": "OrvexSignalScouting/0.3",
         },
     )
 
@@ -302,6 +330,61 @@ def query_denue_area(
         for record in data
         if isinstance(record, dict)
     ]
+
+
+def query_denue_coverage(
+    entity: str,
+    municipality: str,
+    activity_class: str,
+    stratum: str,
+    coverage_limit: int,
+) -> tuple[list[dict[str, object]], int, bool]:
+    accumulated_records: list[dict[str, object]] = []
+
+    batch_count = 0
+    initial_record = 1
+
+    with requests.Session() as session:
+        while initial_record <= coverage_limit:
+            final_record = min(
+                initial_record + DENUE_BATCH_SIZE - 1,
+                coverage_limit,
+            )
+
+            requested_batch_size = (
+                final_record - initial_record + 1
+            )
+
+            batch_records = query_denue_range(
+                session=session,
+                entity=entity,
+                municipality=municipality,
+                activity_class=activity_class,
+                stratum=stratum,
+                initial_record=initial_record,
+                final_record=final_record,
+            )
+
+            batch_count += 1
+
+            accumulated_records.extend(
+                batch_records[:requested_batch_size]
+            )
+
+            if len(batch_records) < requested_batch_size:
+                break
+
+            initial_record = final_record + 1
+
+    coverage_limit_reached = (
+        len(accumulated_records) >= coverage_limit
+    )
+
+    return (
+        accumulated_records,
+        batch_count,
+        coverage_limit_reached,
+    )
 
 
 def normalize_text(value: object) -> str:
@@ -666,17 +749,27 @@ def validate_form(
     form_data: dict[str, object],
 ) -> tuple[str, str, str, str, int]:
     entity = str(form_data["entity"]).strip()
+
     municipality = str(
         form_data["municipality"]
     ).strip()
+
     activity_class = str(
         form_data["activity_class"]
     ).strip()
-    stratum = str(form_data["stratum"]).strip()
 
-    maximum_records = int(
-        str(form_data["maximum_records"])
-    )
+    stratum = str(
+        form_data["stratum"]
+    ).strip()
+
+    try:
+        coverage_limit = int(
+            str(form_data["maximum_records"])
+        )
+    except (TypeError, ValueError) as error:
+        raise ValueError(
+            "Selecciona una cobertura de búsqueda válida."
+        ) from error
 
     valid_entities = get_valid_codes(
         ENTITY_OPTIONS
@@ -717,10 +810,9 @@ def validate_form(
             "Selecciona un tamaño de negocio válido."
         )
 
-    if not 1 <= maximum_records <= 500:
+    if coverage_limit not in VALID_COVERAGE_LIMITS:
         raise ValueError(
-            "La cantidad de registros debe estar "
-            "entre 1 y 500."
+            "Selecciona una cobertura de búsqueda disponible."
         )
 
     return (
@@ -728,7 +820,7 @@ def validate_form(
         municipality,
         activity_class,
         stratum,
-        maximum_records,
+        coverage_limit,
     )
 
 
@@ -737,10 +829,14 @@ def index():
     form_data = get_default_form()
 
     results: list[dict[str, object]] = []
+
     error_message = ""
     api_result_count = 0
     search_executed = False
     search_description = ""
+
+    denue_batch_count = 0
+    coverage_limit_reached = False
 
     if request.method == "POST":
         search_executed = True
@@ -798,15 +894,19 @@ def index():
                 municipality,
                 activity_class,
                 stratum,
-                maximum_records,
+                coverage_limit,
             ) = validate_form(form_data)
 
-            raw_results = query_denue_area(
+            (
+                raw_results,
+                denue_batch_count,
+                coverage_limit_reached,
+            ) = query_denue_coverage(
                 entity=entity,
                 municipality=municipality,
                 activity_class=activity_class,
                 stratum=stratum,
-                maximum_records=maximum_records,
+                coverage_limit=coverage_limit,
             )
 
             api_result_count = len(raw_results)
@@ -858,7 +958,8 @@ def index():
             search_description = (
                 f"{municipality_name}, {entity_name} · "
                 f"SCIAN {activity_class} · "
-                f"{stratum_name}"
+                f"{stratum_name} · "
+                f"Cobertura hasta {coverage_limit:,}"
             )
 
         except ValueError as error:
@@ -903,11 +1004,14 @@ def index():
         entity_options=ENTITY_OPTIONS,
         municipality_options=MUNICIPALITY_OPTIONS,
         stratum_options=STRATUM_OPTIONS,
+        coverage_options=COVERAGE_OPTIONS,
         results=results,
         error_message=error_message,
         api_result_count=api_result_count,
         search_executed=search_executed,
         search_description=search_description,
+        denue_batch_count=denue_batch_count,
+        coverage_limit_reached=coverage_limit_reached,
     )
 
 
