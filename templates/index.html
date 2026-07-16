@@ -20,11 +20,12 @@
     <header class="app-header">
         <div class="container">
             <p class="eyebrow">ORVEXSIGNAL</p>
+
             <h1>Scouting de negocios</h1>
 
             <p class="subtitle">
                 Localiza y filtra prospectos comerciales utilizando
-                información del DENUE.
+                información territorial y económica del DENUE.
             </p>
         </div>
     </header>
@@ -34,71 +35,122 @@
             <h2>Buscar establecimientos</h2>
 
             <p class="help-text">
-                Esta primera versión busca negocios dentro de un radio
-                geográfico. Posteriormente agregaremos selección por
-                estado, municipio y actividad SCIAN.
+                Selecciona una alcaldía, indica una clase SCIAN y
+                aplica los filtros comerciales. Ya no necesitas
+                introducir coordenadas manualmente.
             </p>
 
             <form method="post" class="search-form">
-                <div class="field field-wide">
-                    <label for="condition">
-                        Actividad o palabra
+                <div class="field">
+                    <label for="entity">
+                        Entidad
+                    </label>
+
+                    <select
+                        id="entity"
+                        name="entity"
+                        required
+                    >
+                        {% for option in entity_options %}
+                            <option
+                                value="{{ option.code }}"
+                                {% if form_data.entity == option.code %}
+                                    selected
+                                {% endif %}
+                            >
+                                {{ option.name }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="municipality">
+                        Alcaldía
+                    </label>
+
+                    <select
+                        id="municipality"
+                        name="municipality"
+                        required
+                    >
+                        {% for option in municipality_options %}
+                            <option
+                                value="{{ option.code }}"
+                                {% if form_data.municipality == option.code %}
+                                    selected
+                                {% endif %}
+                            >
+                                {{ option.name }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="activity_class">
+                        Clase SCIAN
                     </label>
 
                     <input
-                        id="condition"
-                        name="condition"
+                        id="activity_class"
+                        name="activity_class"
                         type="text"
-                        value="{{ form_data.condition }}"
-                        placeholder="Ejemplo: llantas"
+                        inputmode="numeric"
+                        maxlength="6"
+                        value="{{ form_data.activity_class }}"
+                        placeholder="Ejemplo: 468213"
                         required
                     >
+
+                    <small class="field-hint">
+                        468213 corresponde al comercio minorista
+                        de llantas. Usa 0 para todas las actividades.
+                    </small>
                 </div>
 
                 <div class="field">
-                    <label for="latitude">
-                        Latitud
+                    <label for="stratum">
+                        Tamaño del negocio
                     </label>
 
-                    <input
-                        id="latitude"
-                        name="latitude"
-                        type="number"
-                        step="any"
-                        value="{{ form_data.latitude }}"
+                    <select
+                        id="stratum"
+                        name="stratum"
                         required
                     >
+                        {% for option in stratum_options %}
+                            <option
+                                value="{{ option.code }}"
+                                {% if form_data.stratum == option.code %}
+                                    selected
+                                {% endif %}
+                            >
+                                {{ option.name }}
+                            </option>
+                        {% endfor %}
+                    </select>
                 </div>
 
                 <div class="field">
-                    <label for="longitude">
-                        Longitud
+                    <label for="maximum_records">
+                        Máximo de registros
                     </label>
 
                     <input
-                        id="longitude"
-                        name="longitude"
-                        type="number"
-                        step="any"
-                        value="{{ form_data.longitude }}"
-                        required
-                    >
-                </div>
-
-                <div class="field">
-                    <label for="distance">
-                        Radio en metros
-                    </label>
-
-                    <input
-                        id="distance"
-                        name="distance"
+                        id="maximum_records"
+                        name="maximum_records"
                         type="number"
                         min="1"
-                        max="5000"
-                        value="{{ form_data.distance }}"
+                        max="500"
+                        value="{{ form_data.maximum_records }}"
                         required
                     >
+
+                    <small class="field-hint">
+                        La aplicación permite consultar entre
+                        1 y 500 registros por búsqueda.
+                    </small>
                 </div>
 
                 <fieldset class="filters">
@@ -108,7 +160,9 @@
                         <input
                             type="checkbox"
                             name="only_with_phone"
-                            {% if form_data.only_with_phone %}checked{% endif %}
+                            {% if form_data.only_with_phone %}
+                                checked
+                            {% endif %}
                         >
 
                         Mostrar solamente negocios con teléfono
@@ -118,14 +172,20 @@
                         <input
                             type="checkbox"
                             name="only_without_website"
-                            {% if form_data.only_without_website %}checked{% endif %}
+                            {% if form_data.only_without_website %}
+                                checked
+                            {% endif %}
                         >
 
-                        Mostrar solamente negocios sin sitio web registrado
+                        Mostrar solamente negocios sin sitio web
+                        registrado
                     </label>
                 </fieldset>
 
-                <button type="submit" class="primary-button">
+                <button
+                    type="submit"
+                    class="primary-button"
+                >
                     Buscar prospectos
                 </button>
             </form>
@@ -133,7 +193,10 @@
 
         {% if error_message %}
             <section class="alert alert-error">
-                <strong>No fue posible completar la consulta.</strong>
+                <strong>
+                    No fue posible completar la consulta.
+                </strong>
+
                 <p>{{ error_message }}</p>
             </section>
         {% endif %}
@@ -167,9 +230,13 @@
                         <div>
                             <h2>Prospectos encontrados</h2>
 
+                            <p class="search-description">
+                                {{ search_description }}
+                            </p>
+
                             <p class="help-text">
-                                La ausencia de sitio web en DENUE debe
-                                verificarse posteriormente.
+                                La ausencia de sitio web en DENUE
+                                debe verificarse posteriormente.
                             </p>
                         </div>
                     </div>
@@ -198,13 +265,23 @@
 
                                             {% if record.get('Razon_social') %}
                                                 <small>
-                                                    {{ record.get('Razon_social') }}
+                                                    {{
+                                                        record.get(
+                                                            'Razon_social',
+                                                            ''
+                                                        )
+                                                    }}
                                                 </small>
                                             {% endif %}
                                         </td>
 
                                         <td>
-                                            {{ record.get('Clase_actividad', '') }}
+                                            {{
+                                                record.get(
+                                                    'Clase_actividad',
+                                                    ''
+                                                )
+                                            }}
                                         </td>
 
                                         <td>
@@ -217,7 +294,12 @@
 
                                         <td>
                                             {% if record.get('Sitio_internet') %}
-                                                {{ record.get('Sitio_internet') }}
+                                                {{
+                                                    record.get(
+                                                        'Sitio_internet',
+                                                        ''
+                                                    )
+                                                }}
                                             {% else %}
                                                 <span class="status-empty">
                                                     Sin sitio registrado
@@ -240,11 +322,14 @@
                 </section>
             {% else %}
                 <section class="alert">
-                    <strong>No quedaron prospectos con esos filtros.</strong>
+                    <strong>
+                        No quedaron prospectos con esos filtros.
+                    </strong>
 
                     <p>
-                        Desmarca alguno de los filtros o prueba otra
-                        actividad o zona.
+                        Desmarca alguno de los filtros, aumenta
+                        el límite o prueba otra alcaldía,
+                        actividad o tamaño.
                     </p>
                 </section>
             {% endif %}

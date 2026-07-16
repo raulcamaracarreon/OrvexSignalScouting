@@ -29,7 +29,8 @@ body {
 }
 
 button,
-input {
+input,
+select {
     font: inherit;
 }
 
@@ -125,7 +126,8 @@ h2 {
     font-weight: 700;
 }
 
-.field input {
+.field input,
+.field select {
     width: 100%;
     min-height: 46px;
     padding: 10px 12px;
@@ -135,9 +137,22 @@ h2 {
     background: #ffffff;
 }
 
-.field input:focus {
+.field input:focus,
+.field select:focus {
     border-color: #4f46e5;
     outline: 3px solid rgba(79, 70, 229, 0.15);
+}
+
+.field-hint {
+    color: #727d92;
+    font-size: 0.78rem;
+    line-height: 1.45;
+}
+
+.search-description {
+    margin-bottom: 8px;
+    color: #312e81;
+    font-weight: 800;
 }
 
 .filters {
