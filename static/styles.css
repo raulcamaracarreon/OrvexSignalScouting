@@ -183,24 +183,46 @@ h2 {
     height: 18px;
 }
 
-.primary-button {
+.form-actions {
+    display: flex;
     grid-column: 1 / -1;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.primary-button,
+.secondary-button {
     width: fit-content;
     min-height: 46px;
     padding: 0 22px;
-    border: 0;
     border-radius: 11px;
-    color: #ffffff;
-    background: #4f46e5;
     font-weight: 800;
     cursor: pointer;
+}
+
+.primary-button {
+    border: 0;
+    color: #ffffff;
+    background: #4f46e5;
 }
 
 .primary-button:hover {
     background: #4338ca;
 }
 
-.primary-button:focus-visible {
+.secondary-button {
+    border: 1px solid #c7d2fe;
+    color: #3730a3;
+    background: #eef2ff;
+}
+
+.secondary-button:hover {
+    border-color: #818cf8;
+    background: #e0e7ff;
+}
+
+.primary-button:focus-visible,
+.secondary-button:focus-visible {
     outline: 3px solid rgba(79, 70, 229, 0.3);
     outline-offset: 3px;
 }
@@ -348,7 +370,7 @@ td small {
 
     .field-wide,
     .filters,
-    .primary-button {
+    .form-actions {
         grid-column: 1;
     }
 
@@ -356,7 +378,12 @@ td small {
         grid-template-columns: 1fr;
     }
 
-    .primary-button {
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .primary-button,
+    .secondary-button {
         width: 100%;
     }
 }

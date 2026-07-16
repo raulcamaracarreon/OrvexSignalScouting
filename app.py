@@ -1,12 +1,18 @@
 from __future__ import annotations
 
+import csv
 import os
+from datetime import datetime
+from io import BytesIO, StringIO
 from pathlib import Path
 from urllib.parse import urlencode
 
 import requests
 from dotenv import load_dotenv
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_file
+from openpyxl import Workbook
+from openpyxl.styles import Alignment, Font, PatternFill
+from openpyxl.utils import get_column_letter
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent
@@ -146,6 +152,61 @@ NORMALIZED_FIELDS = (
     "Sitio_internet",
     "Longitud",
     "Latitud",
+)
+
+EXPORT_COLUMNS = (
+    (
+        "Negocio",
+        "Nombre",
+    ),
+    (
+        "Razón social",
+        "Razon_social",
+    ),
+    (
+        "Actividad",
+        "Clase_actividad",
+    ),
+    (
+        "Estrato",
+        "Estrato",
+    ),
+    (
+        "Teléfono",
+        "Telefono",
+    ),
+    (
+        "Correo",
+        "Correo_e",
+    ),
+    (
+        "Sitio web",
+        "Sitio_internet",
+    ),
+    (
+        "Calle",
+        "Calle",
+    ),
+    (
+        "Número exterior",
+        "Num_Exterior",
+    ),
+    (
+        "Colonia",
+        "Colonia",
+    ),
+    (
+        "Código postal",
+        "CP",
+    ),
+    (
+        "Ubicación",
+        "Ubicacion",
+    ),
+    (
+        "Google Maps",
+        "Google_Maps_URL",
+    ),
 )
 
 load_dotenv(ENV_PATH)
@@ -345,6 +406,261 @@ def filter_results(
         ).lower(),
     )
 
+def get_export_value(
+    record: dict[str, object],
+    field_name: str,
+) -> str:
+    value = normalize_text(
+        record.get(field_name)
+    )
+
+    if value.startswith(
+        (
+            "=",
+            "+",
+            "-",
+            "@",
+        )
+    ):
+        return f"'{value}"
+
+    return value
+
+
+def build_export_filename(
+    extension: str,
+) -> str:
+    timestamp = datetime.now().strftime(
+        "%Y%m%d_%H%M%S"
+    )
+
+    return (
+        "orvexsignal_prospectos_"
+        f"{timestamp}.{extension}"
+    )
+
+
+def export_results_csv(
+    results: list[dict[str, object]],
+):
+    text_stream = StringIO(
+        newline="",
+    )
+
+    writer = csv.writer(
+        text_stream,
+    )
+
+    writer.writerow(
+        [
+            column_title
+            for column_title, _ in EXPORT_COLUMNS
+        ]
+    )
+
+    for record in results:
+        writer.writerow(
+            [
+                get_export_value(
+                    record,
+                    field_name,
+                )
+                for _, field_name in EXPORT_COLUMNS
+            ]
+        )
+
+    csv_content = (
+        "\ufeff"
+        + text_stream.getvalue()
+    ).encode("utf-8")
+
+    byte_stream = BytesIO(
+        csv_content
+    )
+
+    byte_stream.seek(0)
+
+    return send_file(
+        byte_stream,
+        mimetype="text/csv; charset=utf-8",
+        as_attachment=True,
+        download_name=build_export_filename(
+            "csv"
+        ),
+    )
+
+
+def export_results_excel(
+    results: list[dict[str, object]],
+):
+    workbook = Workbook()
+
+    worksheet = workbook.active
+    worksheet.title = "Prospectos"
+    worksheet.freeze_panes = "A2"
+    worksheet.sheet_view.showGridLines = False
+
+    column_titles = [
+        column_title
+        for column_title, _ in EXPORT_COLUMNS
+    ]
+
+    worksheet.append(
+        column_titles
+    )
+
+    header_fill = PatternFill(
+        fill_type="solid",
+        fgColor="312E81",
+    )
+
+    header_font = Font(
+        color="FFFFFF",
+        bold=True,
+    )
+
+    header_alignment = Alignment(
+        horizontal="center",
+        vertical="center",
+        wrap_text=True,
+    )
+
+    for cell in worksheet[1]:
+        cell.fill = header_fill
+        cell.font = header_font
+        cell.alignment = header_alignment
+
+    worksheet.row_dimensions[1].height = 30
+
+    for record in results:
+        worksheet.append(
+            [
+                get_export_value(
+                    record,
+                    field_name,
+                )
+                for _, field_name in EXPORT_COLUMNS
+            ]
+        )
+
+    content_alignment = Alignment(
+        vertical="top",
+        wrap_text=True,
+    )
+
+    for row in worksheet.iter_rows(
+        min_row=2,
+    ):
+        for cell in row:
+            cell.alignment = content_alignment
+
+    column_widths = {
+        "Negocio": 30,
+        "Razón social": 30,
+        "Actividad": 48,
+        "Estrato": 20,
+        "Teléfono": 18,
+        "Correo": 30,
+        "Sitio web": 32,
+        "Calle": 28,
+        "Número exterior": 16,
+        "Colonia": 28,
+        "Código postal": 15,
+        "Ubicación": 38,
+        "Google Maps": 42,
+    }
+
+    for column_number, column_title in enumerate(
+        column_titles,
+        start=1,
+    ):
+        column_letter = get_column_letter(
+            column_number
+        )
+
+        worksheet.column_dimensions[
+            column_letter
+        ].width = column_widths.get(
+            column_title,
+            20,
+        )
+
+    worksheet.auto_filter.ref = (
+        worksheet.dimensions
+    )
+
+    website_column = (
+        column_titles.index("Sitio web")
+        + 1
+    )
+
+    maps_column = (
+        column_titles.index("Google Maps")
+        + 1
+    )
+
+    for row_number, record in enumerate(
+        results,
+        start=2,
+    ):
+        website = normalize_text(
+            record.get("Sitio_internet")
+        )
+
+        if website:
+            website_url = website
+
+            if not website.lower().startswith(
+                (
+                    "http://",
+                    "https://",
+                )
+            ):
+                website_url = (
+                    f"https://{website}"
+                )
+
+            website_cell = worksheet.cell(
+                row=row_number,
+                column=website_column,
+            )
+
+            website_cell.hyperlink = website_url
+            website_cell.style = "Hyperlink"
+
+        maps_url = normalize_text(
+            record.get("Google_Maps_URL")
+        )
+
+        if maps_url:
+            maps_cell = worksheet.cell(
+                row=row_number,
+                column=maps_column,
+            )
+
+            maps_cell.hyperlink = maps_url
+            maps_cell.style = "Hyperlink"
+
+    byte_stream = BytesIO()
+
+    workbook.save(
+        byte_stream
+    )
+
+    byte_stream.seek(0)
+
+    return send_file(
+        byte_stream,
+        mimetype=(
+            "application/vnd.openxmlformats-"
+            "officedocument.spreadsheetml.sheet"
+        ),
+        as_attachment=True,
+        download_name=build_export_filename(
+            "xlsx"
+        ),
+    )
+
 
 def validate_form(
     form_data: dict[str, object],
@@ -429,6 +745,11 @@ def index():
     if request.method == "POST":
         search_executed = True
 
+        action = request.form.get(
+            "action",
+            "search",
+        ).strip()
+
         form_data = {
             "entity": request.form.get(
                 "entity",
@@ -463,6 +784,15 @@ def index():
         }
 
         try:
+            if action not in {
+                "search",
+                "export_csv",
+                "export_excel",
+            }:
+                raise ValueError(
+                    "La acción solicitada no es válida."
+                )
+
             (
                 entity,
                 municipality,
@@ -490,6 +820,25 @@ def index():
                     form_data["only_without_website"]
                 ),
             )
+
+            if action in {
+                "export_csv",
+                "export_excel",
+            } and not results:
+                raise ValueError(
+                    "No hay prospectos para exportar "
+                    "con los filtros seleccionados."
+                )
+
+            if action == "export_csv":
+                return export_results_csv(
+                    results
+                )
+
+            if action == "export_excel":
+                return export_results_excel(
+                    results
+                )
 
             entity_name = get_option_name(
                 ENTITY_OPTIONS,
