@@ -1,19 +1,73 @@
 # OrvexSignal Scouting
 
-Aplicación web en Flask para localizar y filtrar establecimientos de México mediante la API del Directorio Estadístico Nacional de Unidades Económicas (DENUE) del INEGI.
+Aplicación web local en Flask para localizar, filtrar y exportar
+establecimientos de México mediante la API del Directorio Estadístico
+Nacional de Unidades Económicas (DENUE) del INEGI.
 
-El proyecto nació como una herramienta de scouting comercial para identificar negocios locales que podrían beneficiarse de soluciones digitales de atención, captación de prospectos y automatización.
+OrvexSignal Scouting fue creada como una herramienta de exploración
+comercial para identificar negocios que podrían beneficiarse de
+soluciones digitales de atención, captación de prospectos y
+automatización.
 
-## Funciones actuales
+## Estado
 
-- Consulta de establecimientos mediante la API del DENUE.
-- Búsqueda por actividad o palabra clave.
-- Búsqueda alrededor de coordenadas geográficas.
-- Radio configurable de hasta 5,000 metros.
-- Filtro de negocios con teléfono.
-- Filtro de negocios sin sitio web registrado en DENUE.
-- Visualización de nombre, actividad, estrato, teléfono, colonia y ubicación.
-- Interfaz web adaptable a escritorio y dispositivos móviles.
+**Versión estable: 1.0.0**
+
+El alcance funcional planeado está completo y validado mediante
+búsquedas reales, filtros territoriales y comerciales, revisión en
+Google Maps y exportaciones CSV y Excel.
+
+## Funciones principales
+
+- Cobertura de las 32 entidades federativas de México.
+- Selección dinámica de municipios, alcaldías o demarcaciones.
+- Opción para consultar todos los municipios de una entidad.
+- Catálogo de 1,086 clases SCIAN México 2023.
+- Búsqueda de actividades económicas por código o nombre.
+- Búsqueda tolerante a mayúsculas, minúsculas y acentos.
+- Consulta del DENUE por bloques acumulados de hasta 500 registros.
+- Coberturas configurables de hasta 500, 1,000, 2,000 o 5,000
+  establecimientos.
+- Filtro para mostrar únicamente negocios con teléfono.
+- Filtro para mostrar únicamente negocios sin sitio web registrado.
+- Filtro local por colonia con coincidencias parciales.
+- Visualización de nombre, actividad, estrato, teléfono, sitio web,
+  colonia y ubicación.
+- Enlace de verificación de cada negocio en Google Maps.
+- Exportación del conjunto filtrado a CSV compatible con Excel.
+- Exportación a XLSX con formato, filtros e hipervínculos.
+- Interfaz adaptable a escritorio y dispositivos móviles.
+- Tema visual oscuro de OrvexSignal.
+
+## Flujo de trabajo
+
+```text
+Seleccionar entidad y municipio
+→ buscar o indicar una clase SCIAN
+→ elegir la cobertura de búsqueda
+→ aplicar filtros comerciales y de colonia
+→ revisar prospectos
+→ verificar negocios en Google Maps
+→ exportar CSV o Excel
+```
+
+## Cobertura DENUE
+
+La aplicación consulta el DENUE en bloques consecutivos de hasta
+500 registros y combina automáticamente los resultados.
+
+Ejemplo:
+
+```text
+Cobertura 500   → hasta 1 consulta
+Cobertura 1,000 → hasta 2 consultas
+Cobertura 2,000 → hasta 4 consultas
+Cobertura 5,000 → hasta 10 consultas
+```
+
+La recuperación se detiene antes cuando el DENUE devuelve un bloque
+incompleto. Alcanzar la cobertura seleccionada no garantiza que se
+hayan agotado todos los establecimientos disponibles.
 
 ## Tecnologías
 
@@ -21,86 +75,152 @@ El proyecto nació como una herramienta de scouting comercial para identificar n
 - Flask
 - Requests
 - python-dotenv
+- openpyxl
 - HTML
 - CSS
+- JavaScript sin dependencias de frontend
 
 ## Requisitos
 
 - Python 3.12 o una versión compatible.
 - Token gratuito de la API del DENUE.
+- Conexión a internet para consultar el DENUE y abrir Google Maps.
 
 El token puede solicitarse en el sitio oficial del INEGI:
 
 https://www.inegi.org.mx/servicios/api_denue.html
 
-## Instalación
+## Instalación en Windows PowerShell
 
 Clona el repositorio:
 
-    git clone https://github.com/raulcamaracarreon/OrvexSignalScouting.git
+```powershell
+git clone https://github.com/raulcamaracarreon/OrvexSignalScouting.git
 
-    Set-Location .\OrvexSignalScouting
+Set-Location .\OrvexSignalScouting
+```
 
-Crea el entorno virtual:
+Crea y activa el entorno virtual:
 
-    py -m venv .venv
+```powershell
+py -m venv .venv
 
-    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
+Set-ExecutionPolicy `
+  -Scope Process `
+  -ExecutionPolicy Bypass `
+  -Force
 
-    & .\.venv\Scripts\Activate.ps1
+& .\.venv\Scripts\Activate.ps1
+```
 
 Instala las dependencias:
 
-    python -m pip install -r requirements.txt
+```powershell
+python -m pip install -r requirements.txt
+```
 
 ## Configuración
 
 Copia el archivo de ejemplo:
 
-    Copy-Item '.env.example' '.env'
+```powershell
+Copy-Item '.env.example' '.env'
+```
 
-Abre el archivo `.env` y agrega tu token:
+Abre `.env` y agrega el token:
 
-    DENUE_TOKEN=TU_TOKEN_DEL_DENUE
+```text
+DENUE_TOKEN=TU_TOKEN_DEL_DENUE
+```
 
 El archivo `.env` está excluido de Git y no debe compartirse.
 
 ## Ejecución
 
-Ejecuta la aplicación:
+Con el entorno virtual activo:
 
-    python .\app.py
+```powershell
+python .\app.py
+```
 
-Después abre en el navegador:
+Abre en el navegador:
 
-    http://127.0.0.1:5000
+```text
+http://127.0.0.1:5000
+```
 
-## Estado del proyecto
+La aplicación está configurada para uso local.
 
-Primera versión funcional:
+## Catálogos incluidos
 
-- Conexión con DENUE validada.
-- Búsqueda geográfica operativa.
-- Filtros comerciales operativos.
-- Tabla de resultados operativa.
+### SCIAN México 2023
 
-## Próximas mejoras consideradas
+El catálogo compacto de clases SCIAN está en:
 
-- Selección de entidad y municipio.
-- Búsqueda mediante códigos SCIAN.
-- Exportación a CSV y Excel.
-- Mapa de establecimientos.
-- Clasificación de prospectos.
-- Seguimiento de contactos.
-- Almacenamiento local con SQLite.
+```text
+static/data/scian_classes.json
+```
 
-## Fuente de datos
+Contiene código y título oficial de 1,086 clases económicas.
 
-Los datos son consultados mediante la API del DENUE del Instituto Nacional de Estadística y Geografía de México.
+### Catálogo territorial
 
-La ausencia de teléfono, correo o sitio web en un registro del DENUE no garantiza que el establecimiento carezca actualmente de esos medios. La información debe verificarse antes de utilizarse para decisiones comerciales.
+El catálogo de entidades y municipios está en:
 
-## Seguridad
+```text
+static/data/inegi_geo_catalog.json
+```
+
+Fue generado a partir del Servicio Web del Catálogo Único de Claves
+Geoestadísticas del INEGI.
+
+Para reconstruir o actualizar este catálogo:
+
+```powershell
+python .\scripts\build_geo_catalog.py
+```
+
+Después valida el archivo antes de publicarlo:
+
+```powershell
+python -c "import json, pathlib; p=pathlib.Path(r'.\static\data\inegi_geo_catalog.json'); d=json.loads(p.read_text(encoding='utf-8')); assert d['entity_count']==32; assert d['municipality_count']>=2400; print('GEO_CATALOG_OK', d['entity_count'], d['municipality_count'])"
+```
+
+## Exportaciones
+
+Las exportaciones incluyen los prospectos que cumplen todos los
+filtros seleccionados dentro de la cobertura examinada.
+
+### CSV
+
+- Codificación UTF-8 con BOM.
+- Compatible con Excel.
+- Protección básica contra fórmulas en celdas.
+
+### Excel
+
+- Archivo XLSX.
+- Encabezados con formato.
+- Filtros automáticos.
+- Columnas ajustadas.
+- Hipervínculos para sitios web y Google Maps.
+
+## Interpretación de los datos
+
+Los datos provienen del DENUE del INEGI.
+
+La ausencia de teléfono, correo o sitio web en el DENUE no demuestra
+que el negocio carezca actualmente de esos medios. Los datos pueden
+estar incompletos o desactualizados y deben verificarse antes de tomar
+decisiones comerciales.
+
+El filtro “sin sitio web” significa únicamente que el DENUE no tiene
+un sitio registrado para ese establecimiento.
+
+El enlace de Google Maps facilita la verificación, pero no garantiza
+una coincidencia exacta en todos los casos.
+
+## Seguridad y privacidad
 
 No deben incluirse en el repositorio:
 
@@ -111,7 +231,27 @@ No deben incluirse en el repositorio:
 - Teléfonos recopilados.
 - Exportaciones comerciales.
 - Información privada.
+- URLs completas del DENUE que contengan el token.
+
+El repositorio excluye mediante `.gitignore` los archivos locales y
+comerciales sensibles.
+
+## Alcance de la versión 1.0
+
+La versión 1.0 está orientada a exploración y exportación de
+prospectos. No incluye:
+
+- CRM.
+- Envío de mensajes.
+- Automatización de campañas.
+- Base de datos de contactos trabajados.
+- Seguimiento de respuestas.
+- Clasificación automática de prospectos.
+
+Estas funciones solo deberían añadirse después de validar una
+necesidad operativa real.
 
 ## Licencia
 
-Este proyecto se distribuye bajo la licencia MIT.
+Este proyecto se distribuye bajo la licencia MIT. Consulta el archivo
+`LICENSE`.
