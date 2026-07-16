@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import csv
 import os
+import unicodedata
 from datetime import datetime
 from io import BytesIO, StringIO
 from pathlib import Path
@@ -247,6 +248,7 @@ def get_default_form() -> dict[str, object]:
         "activity_class": "468213",
         "stratum": "0",
         "maximum_records": "1000",
+        "colony_filter": "",
         "only_with_phone": True,
         "only_without_website": True,
     }
@@ -393,6 +395,22 @@ def normalize_text(value: object) -> str:
 
     return " ".join(str(value).split())
 
+
+def normalize_search_text(value: object) -> str:
+    normalized_value = unicodedata.normalize(
+        "NFD",
+        normalize_text(value),
+    )
+
+    without_accents = "".join(
+        character
+        for character in normalized_value
+        if unicodedata.category(character) != "Mn"
+    )
+
+    return without_accents.casefold()
+
+
 def build_google_maps_url(
     record: dict[str, object],
 ) -> str:
@@ -460,8 +478,13 @@ def filter_results(
     records: list[dict[str, object]],
     only_with_phone: bool,
     only_without_website: bool,
+    colony_filter: str,
 ) -> list[dict[str, object]]:
     filtered_records: list[dict[str, object]] = []
+
+    normalized_colony_filter = normalize_search_text(
+        colony_filter
+    )
 
     for record in records:
         normalized_record = normalize_record(record)
@@ -474,19 +497,29 @@ def filter_results(
             normalized_record.get("Sitio_internet")
         )
 
+        colony = normalize_search_text(
+            normalized_record.get("Colonia")
+        )
+
         if only_with_phone and not phone:
             continue
 
         if only_without_website and website:
             continue
 
+        if (
+            normalized_colony_filter
+            and normalized_colony_filter not in colony
+        ):
+            continue
+
         filtered_records.append(normalized_record)
 
     return sorted(
         filtered_records,
-        key=lambda item: normalize_text(
+        key=lambda item: normalize_search_text(
             item.get("Nombre")
-        ).lower(),
+        ),
     )
 
 def get_export_value(
@@ -747,7 +780,7 @@ def export_results_excel(
 
 def validate_form(
     form_data: dict[str, object],
-) -> tuple[str, str, str, str, int]:
+) -> tuple[str, str, str, str, str, int]:
     entity = str(form_data["entity"]).strip()
 
     municipality = str(
@@ -761,6 +794,10 @@ def validate_form(
     stratum = str(
         form_data["stratum"]
     ).strip()
+
+    colony_filter = normalize_text(
+        form_data["colony_filter"]
+    )
 
     try:
         coverage_limit = int(
@@ -815,11 +852,18 @@ def validate_form(
             "Selecciona una cobertura de búsqueda disponible."
         )
 
+    if len(colony_filter) > 100:
+        raise ValueError(
+            "El filtro de colonia no puede superar "
+            "los 100 caracteres."
+        )
+
     return (
         entity,
         municipality,
         activity_class,
         stratum,
+        colony_filter,
         coverage_limit,
     )
 
@@ -867,6 +911,10 @@ def index():
                 "maximum_records",
                 "",
             ).strip(),
+            "colony_filter": request.form.get(
+                "colony_filter",
+                "",
+            ).strip(),
             "only_with_phone": (
                 request.form.get("only_with_phone")
                 == "on"
@@ -894,6 +942,7 @@ def index():
                 municipality,
                 activity_class,
                 stratum,
+                colony_filter,
                 coverage_limit,
             ) = validate_form(form_data)
 
@@ -919,6 +968,7 @@ def index():
                 only_without_website=bool(
                     form_data["only_without_website"]
                 ),
+                colony_filter=colony_filter,
             )
 
             if action in {
@@ -961,6 +1011,11 @@ def index():
                 f"{stratum_name} · "
                 f"Cobertura hasta {coverage_limit:,}"
             )
+
+            if colony_filter:
+                search_description += (
+                    f" · Colonia contiene: {colony_filter}"
+                )
 
         except ValueError as error:
             error_message = str(error)

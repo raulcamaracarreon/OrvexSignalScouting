@@ -40,9 +40,9 @@
             <h2>Buscar establecimientos</h2>
 
             <p class="help-text">
-                Selecciona una alcaldía, indica una clase SCIAN y
-                aplica los filtros comerciales. Ya no necesitas
-                introducir coordenadas manualmente.
+                Selecciona una alcaldía, busca una actividad SCIAN
+                y, cuando lo necesites, limita los resultados por
+                colonia. No necesitas introducir coordenadas.
             </p>
 
             <form method="post" class="search-form">
@@ -239,6 +239,27 @@
                     <small class="field-hint">
                         La aplicación consulta bloques de hasta
                         500 registros y los combina automáticamente.
+                    </small>
+                </div>
+
+                <div class="field">
+                    <label for="colony_filter">
+                        Filtrar por colonia
+                    </label>
+
+                    <input
+                        id="colony_filter"
+                        name="colony_filter"
+                        type="search"
+                        maxlength="100"
+                        value="{{ form_data.colony_filter }}"
+                        placeholder="Ejemplo: Roma, Del Valle o Centro"
+                        autocomplete="off"
+                    >
+
+                    <small class="field-hint">
+                        Campo opcional. Admite coincidencias parciales
+                        y no distingue mayúsculas ni acentos.
                     </small>
                 </div>
 
