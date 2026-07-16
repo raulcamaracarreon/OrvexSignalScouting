@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import json
 import os
 import unicodedata
 from datetime import datetime
@@ -18,6 +19,13 @@ from openpyxl.utils import get_column_letter
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 ENV_PATH = PROJECT_ROOT / ".env"
+
+GEO_CATALOG_PATH = (
+    PROJECT_ROOT
+    / "static"
+    / "data"
+    / "inegi_geo_catalog.json"
+)
 
 DENUE_BASE_URL = (
     "https://www.inegi.org.mx/app/api/denue/v1/consulta"
@@ -49,83 +57,220 @@ VALID_COVERAGE_LIMITS = {
     for option in COVERAGE_OPTIONS
 }
 
-ENTITY_OPTIONS = [
-    {
-        "code": "09",
-        "name": "Ciudad de México",
-    },
-]
+def load_geo_catalog(
+) -> tuple[
+    list[dict[str, str]],
+    dict[str, list[dict[str, str]]],
+]:
+    try:
+        catalog = json.loads(
+            GEO_CATALOG_PATH.read_text(
+                encoding="utf-8"
+            )
+        )
+    except FileNotFoundError as error:
+        raise RuntimeError(
+            "No se encontró el catálogo territorial. "
+            "Ejecuta "
+            "python .\\scripts\\build_geo_catalog.py."
+        ) from error
+    except json.JSONDecodeError as error:
+        raise RuntimeError(
+            "El catálogo territorial contiene "
+            "JSON inválido."
+        ) from error
 
-MUNICIPALITY_OPTIONS = [
-    {
-        "code": "0",
-        "name": "Todas las alcaldías",
-    },
-    {
-        "code": "002",
-        "name": "Azcapotzalco",
-    },
-    {
-        "code": "003",
-        "name": "Coyoacán",
-    },
-    {
-        "code": "004",
-        "name": "Cuajimalpa de Morelos",
-    },
-    {
-        "code": "005",
-        "name": "Gustavo A. Madero",
-    },
-    {
-        "code": "006",
-        "name": "Iztacalco",
-    },
-    {
-        "code": "007",
-        "name": "Iztapalapa",
-    },
-    {
-        "code": "008",
-        "name": "La Magdalena Contreras",
-    },
-    {
-        "code": "009",
-        "name": "Milpa Alta",
-    },
-    {
-        "code": "010",
-        "name": "Álvaro Obregón",
-    },
-    {
-        "code": "011",
-        "name": "Tláhuac",
-    },
-    {
-        "code": "012",
-        "name": "Tlalpan",
-    },
-    {
-        "code": "013",
-        "name": "Xochimilco",
-    },
-    {
-        "code": "014",
-        "name": "Benito Juárez",
-    },
-    {
-        "code": "015",
-        "name": "Cuauhtémoc",
-    },
-    {
-        "code": "016",
-        "name": "Miguel Hidalgo",
-    },
-    {
-        "code": "017",
-        "name": "Venustiano Carranza",
-    },
-]
+    entity_records = catalog.get(
+        "entities"
+    )
+
+    if not isinstance(entity_records, list):
+        raise RuntimeError(
+            "El catálogo territorial no contiene "
+            "una lista válida de entidades."
+        )
+
+    entity_options: list[
+        dict[str, str]
+    ] = []
+
+    municipality_options_by_entity: dict[
+        str,
+        list[dict[str, str]],
+    ] = {}
+
+    entity_codes: set[str] = set()
+
+    for entity_record in entity_records:
+        if not isinstance(entity_record, dict):
+            raise RuntimeError(
+                "El catálogo contiene una entidad inválida."
+            )
+
+        entity_code = str(
+            entity_record.get("code", "")
+        ).strip()
+
+        entity_name = " ".join(
+            str(
+                entity_record.get("name", "")
+            ).split()
+        )
+
+        municipality_records = (
+            entity_record.get("municipalities")
+        )
+
+        if (
+            len(entity_code) != 2
+            or not entity_code.isdigit()
+            or not entity_name
+        ):
+            raise RuntimeError(
+                "El catálogo contiene datos inválidos "
+                "de una entidad."
+            )
+
+        if entity_code in entity_codes:
+            raise RuntimeError(
+                "El catálogo contiene claves "
+                "de entidad duplicadas."
+            )
+
+        if not isinstance(
+            municipality_records,
+            list,
+        ):
+            raise RuntimeError(
+                f"La entidad {entity_code} no contiene "
+                "una lista válida de municipios."
+            )
+
+        entity_codes.add(
+            entity_code
+        )
+
+        municipality_options: list[
+            dict[str, str]
+        ] = []
+
+        municipality_codes: set[str] = set()
+
+        for municipality_record in municipality_records:
+            if not isinstance(
+                municipality_record,
+                dict,
+            ):
+                raise RuntimeError(
+                    "El catálogo contiene un municipio "
+                    "inválido."
+                )
+
+            municipality_code = str(
+                municipality_record.get(
+                    "code",
+                    "",
+                )
+            ).strip()
+
+            municipality_name = " ".join(
+                str(
+                    municipality_record.get(
+                        "name",
+                        "",
+                    )
+                ).split()
+            )
+
+            if (
+                len(municipality_code) != 3
+                or not municipality_code.isdigit()
+                or not municipality_name
+            ):
+                raise RuntimeError(
+                    "El catálogo contiene datos "
+                    "municipales inválidos."
+                )
+
+            if municipality_code in municipality_codes:
+                raise RuntimeError(
+                    "El catálogo contiene claves "
+                    "municipales duplicadas para "
+                    f"la entidad {entity_code}."
+                )
+
+            municipality_codes.add(
+                municipality_code
+            )
+
+            municipality_options.append(
+                {
+                    "code": municipality_code,
+                    "name": municipality_name,
+                }
+            )
+
+        entity_options.append(
+            {
+                "code": entity_code,
+                "name": entity_name,
+            }
+        )
+
+        municipality_options_by_entity[
+            entity_code
+        ] = sorted(
+            municipality_options,
+            key=lambda option: (
+                option["name"].casefold(),
+                option["code"],
+            ),
+        )
+
+    if len(entity_options) != 32:
+        raise RuntimeError(
+            "El catálogo territorial debe contener "
+            "32 entidades federativas."
+        )
+
+    entity_options.sort(
+        key=lambda option: (
+            option["name"].casefold(),
+            option["code"],
+        )
+    )
+
+    return (
+        entity_options,
+        municipality_options_by_entity,
+    )
+
+
+(
+    ENTITY_OPTIONS,
+    MUNICIPALITY_OPTIONS_BY_ENTITY,
+) = load_geo_catalog()
+
+
+def get_municipality_options(
+    entity_code: str,
+) -> list[dict[str, str]]:
+    all_municipalities_name = (
+        "Todas las alcaldías"
+        if entity_code == "09"
+        else "Todos los municipios"
+    )
+
+    return [
+        {
+            "code": "0",
+            "name": all_municipalities_name,
+        },
+        *MUNICIPALITY_OPTIONS_BY_ENTITY.get(
+            entity_code,
+            [],
+        ),
+    ]
 
 STRATUM_OPTIONS = [
     {
@@ -812,10 +957,6 @@ def validate_form(
         ENTITY_OPTIONS
     )
 
-    valid_municipalities = get_valid_codes(
-        MUNICIPALITY_OPTIONS
-    )
-
     valid_strata = get_valid_codes(
         STRATUM_OPTIONS
     )
@@ -825,9 +966,20 @@ def validate_form(
             "Selecciona una entidad válida."
         )
 
+    municipality_options = (
+        get_municipality_options(
+            entity
+        )
+    )
+
+    valid_municipalities = get_valid_codes(
+        municipality_options
+    )
+
     if municipality not in valid_municipalities:
         raise ValueError(
-            "Selecciona una alcaldía válida."
+            "Selecciona un municipio o "
+            "demarcación válido."
         )
 
     if not (
@@ -996,7 +1148,9 @@ def index():
             )
 
             municipality_name = get_option_name(
-                MUNICIPALITY_OPTIONS,
+                get_municipality_options(
+                    entity
+                ),
                 municipality,
             )
 
@@ -1057,7 +1211,9 @@ def index():
         "index.html",
         form_data=form_data,
         entity_options=ENTITY_OPTIONS,
-        municipality_options=MUNICIPALITY_OPTIONS,
+        municipality_options=get_municipality_options(
+            str(form_data["entity"])
+        ),
         stratum_options=STRATUM_OPTIONS,
         coverage_options=COVERAGE_OPTIONS,
         results=results,

@@ -19,6 +19,11 @@
         src="{{ url_for('static', filename='scian-search.js') }}"
         defer
     ></script>
+
+    <script
+        src="{{ url_for('static', filename='geo-select.js') }}"
+        defer
+    ></script>
 </head>
 
 <body>
@@ -40,9 +45,9 @@
             <h2>Buscar establecimientos</h2>
 
             <p class="help-text">
-                Selecciona una alcaldía, busca una actividad SCIAN
-                y, cuando lo necesites, limita los resultados por
-                colonia. No necesitas introducir coordenadas.
+                Selecciona una entidad y un municipio, busca una
+                actividad SCIAN y, cuando lo necesites, limita los
+                resultados por colonia. No necesitas coordenadas.
             </p>
 
             <form method="post" class="search-form">
@@ -54,6 +59,13 @@
                     <select
                         id="entity"
                         name="entity"
+                        data-catalog-url="{{
+                            url_for(
+                                'static',
+                                filename='data/inegi_geo_catalog.json'
+                            )
+                        }}"
+                        aria-describedby="geo_status"
                         required
                     >
                         {% for option in entity_options %}
@@ -71,12 +83,16 @@
 
                 <div class="field">
                     <label for="municipality">
-                        Alcaldía
+                        Municipio o alcaldía
                     </label>
 
                     <select
                         id="municipality"
                         name="municipality"
+                        data-selected-municipality="{{
+                            form_data.municipality
+                        }}"
+                        aria-describedby="geo_status"
                         required
                     >
                         {% for option in municipality_options %}
@@ -90,6 +106,15 @@
                             </option>
                         {% endfor %}
                     </select>
+
+                    <small
+                        id="geo_status"
+                        class="field-hint"
+                        role="status"
+                    >
+                        Selecciona una entidad para consultar
+                        sus municipios o demarcaciones.
+                    </small>
                 </div>
 
                 <div class="field field-wide scian-search-field">
