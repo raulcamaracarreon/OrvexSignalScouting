@@ -4,6 +4,7 @@ $ErrorActionPreference = "Stop"
 $ProjectRoot = Split-Path -Parent $PSScriptRoot
 $PythonPath = Join-Path $ProjectRoot ".venv\Scripts\python.exe"
 $SpecPath = Join-Path $ProjectRoot "OrvexSignalScouting.spec"
+$RequirementsPath = Join-Path $ProjectRoot "requirements-desktop.txt"
 $DistFolder = Join-Path $ProjectRoot "dist\OrvexSignalScouting"
 $SourceEnv = Join-Path $ProjectRoot ".env"
 $ExampleEnv = Join-Path $ProjectRoot ".env.example"
@@ -16,11 +17,11 @@ if (-not (Test-Path $PythonPath)) {
     )
 }
 
+Set-Location $ProjectRoot
+
 Write-Host ""
 Write-Host "Instalando dependencias de escritorio..."
-& $PythonPath -m pip install -r (
-    Join-Path $ProjectRoot "requirements-desktop.txt"
-)
+& $PythonPath -m pip install -r $RequirementsPath
 
 Write-Host ""
 Write-Host "Construyendo OrvexSignal Scouting portable..."
