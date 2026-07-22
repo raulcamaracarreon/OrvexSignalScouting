@@ -8,3 +8,5 @@ __pycache__/
 instance/
 exports/
 md_proyecto/
+build/
+dist/
